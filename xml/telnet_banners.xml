@@ -655,7 +655,7 @@
     <param pos="1" name="host.name"/>
   </fingerprint>
 
-  <fingerprint pattern="^(?:\r|\n)*HP JetDirect(?:\r|\n)+$">
+  <fingerprint pattern="^(?:\r|\n)*HP JetDirect(?:\r|\n)+">
     <description>HP Printer - Jet Direct</description>
     <!-- HP JetDirect\r\nPassword is not set\r\n\r\nPlease type "menu" for the MENU system, \r\nor "?" for help, or "/" for current settings.\r\n> -->
 
@@ -1086,7 +1086,7 @@
     <param pos="0" name="os.product" value="EDR G902 Firmware"/>
   </fingerprint>
 
-  <fingerprint pattern="^Red Hat Linux release ([^\\s]+)\\s*.*$">
+  <fingerprint pattern="^Red Hat Linux release ([^\\s]+)\\s*">
     <description>RedHat general purpose linux</description>
     <!-- Red Hat Linux release 9 (Shrike)\nKernel 2.4.20-8 on an i686\nlogin: -->
 
@@ -1095,7 +1095,7 @@
    </example>
     <param pos="0" name="os.vendor" value="Red Hat"/>
     <param pos="0" name="os.family" value="Linux"/>
-    <param pos="0" name="os.device" value="Linux"/>
+    <param pos="0" name="os.product" value="Linux"/>
     <param pos="1" name="os.version"/>
   </fingerprint>
 
@@ -1148,7 +1148,7 @@
     <param pos="3" name="os.arch"/>
   </fingerprint>
 
-  <fingerprint pattern="(?m)^Fedora Core.release (.*) \(.*\).*Kernel (.*) on a[^ ]* ([^ ]*\d).*$" flags="REG_MULTILINE">
+  <fingerprint pattern="(?m)^Fedora Core.release (.*) \(.*\).*Kernel (.*) on a[^ ]* ([^ ]*\d)" flags="REG_MULTILINE">
     <description>Fedora Core Release</description>
     <!-- Fedora Core release 1 (Yarrow)\nKernel 2.4.20-13.9ensim-3.5.0-13 on an i686\nlogin:-->
 
@@ -1164,7 +1164,7 @@
     <param pos="0" name="os.cpe23" value="cpe:/o:redhat:fedora:{os.version}"/>
   </fingerprint>
 
-  <fingerprint pattern="(?m)^Welcome to SuSE Linux (.*) \(([^\)]+)\) - Kernel (.*) .*">
+  <fingerprint pattern="(?m)^Welcome to SuSE Linux (.*) \(([^\)]+)\) - Kernel (.*) ">
     <description>SuSE Linux</description>
     <!-- Welcome to SuSE Linux 7.0 (i386) - Kernel 2.2.16-RAID (0). 2VG029037\n\nlogin: -->
 
@@ -1180,7 +1180,7 @@
     <param pos="3" name="linux.kernel.version"/>
   </fingerprint>
 
-  <fingerprint pattern="^Turbolinux ApplianceServer (\d+\.\d+).*">
+  <fingerprint pattern="^Turbolinux ApplianceServer (\d+\.\d+)">
     <description>Turbolinux ApplianceServer</description>
     <!--Turbolinux ApplianceServer 4.0 (Atlas2) Linux 2.6.32-431.23.3.el6.x86_64 on a x86_64\n(senyo191x89.digitalink.ne.jp) TTY: 12:15 on Tuesday, 02 October 2018 login:  -->
 
@@ -1195,7 +1195,7 @@
     <param pos="1" name="os.version"/>
   </fingerprint>
 
-  <fingerprint pattern="^UnixWare ([^ ]+).*$">
+  <fingerprint pattern="^UnixWare ([^ ]+)">
     <description>UnixWare</description>
     <!-- UnixWare 2.1.3 (profil) (pts/3)\n\n\nlogin:  -->
 
@@ -1209,7 +1209,7 @@
     <param pos="1" name="os.version"/>
   </fingerprint>
 
-  <fingerprint pattern="^Telnet Server Build (5.*)">
+  <fingerprint pattern="(?m)^Telnet Server Build (5\.[.\d]+)">
     <description>Windows 2000</description>
     <!--Microsoft (R) Windows NT (TM) Version 4.00 (Build 1381)\nWelcome to Microsoft Telnet Service \nTelnet Server Build 5.00.99034.1\nlogin:  -->
 
@@ -1241,7 +1241,7 @@
     <description>Arescom System</description>
     <!--NDS1260HE-TLI Copyright by ARESCOM 2002\n\n\nPassword: -->
 
-    <example _encoding="base64" os.model="NDS1260HE-TLI">
+    <example _encoding="base64" os.model="NDS1260HE-TLI" hw.model="NDS1260HE-TLI">
       TkRTMTI2MEhFLVRMSSBDb3B5cmlnaHQgYnkgQVJFU0NPTSAyMDAyCgoKClBhc3N3b3JkOgo=
     </example>
     <param pos="0" name="os.vendor" value="Arescom"/>
@@ -1296,7 +1296,7 @@
     <param pos="0" name="os.family" value="VxWorks"/>
   </fingerprint>
 
-  <fingerprint pattern=".*Nortel.*Passport ([^ ]*) .*Software Release ([^ ]*).*">
+  <fingerprint pattern="Nortel.*Passport ([^ ]*) .*Software Release ([^ ]*)">
     <description>Nortel Passport</description>
     <!-- *********************************************\n\n\n* Copyright (c) 2003 Nortel Networks, Inc.  *\n\n\n* All Rights Reserved                       *\n\n\n* Passport 8010                             *\n\n\n* Software Release 3.5.0.0                  *\n\n\n*********************************************\n\n\n\n\nLogin: -->
 
@@ -1387,7 +1387,7 @@
     <param pos="0" name="os.cpe23" value="cpe:/o:microsoft:windows:-"/>
   </fingerprint>
 
-  <fingerprint pattern="Cobalt Linux release\W(.*)\W\(.*">
+  <fingerprint pattern="Cobalt Linux release\W(.*)\W\(">
     <description>Cobalt Linux</description>
     <!-- Cobalt Linux release 6.0 (Shinkansen)\nKernel 2.2.16C37_III on an i586\nlogin:  -->
 
@@ -1456,7 +1456,7 @@
     <param pos="0" name="os.cpe23" value="cpe:/o:sun:solaris:{os.version}"/>
   </fingerprint>
 
-  <fingerprint pattern="^Digital UNIX \(([^)]+).*">
+  <fingerprint pattern="^Digital UNIX \(([^)]+)">
     <description>Digital Unix</description>
     <!-- Digital UNIX (journal) (ttyp2)\n\n\nlogin: -->
 
@@ -1469,7 +1469,7 @@
     <param pos="1" name="host.name"/>
   </fingerprint>
 
-  <fingerprint pattern="(?m)^Compaq Tru64 UNIX V(.*) \(Rev. (.*\d)\) .*">
+  <fingerprint pattern="(?m)^Compaq Tru64 UNIX V(.*) \(Rev. (.*\d)\) ">
     <description>Compaq Tru64 UNIX V</description>
     <!-- Compaq Tru64 UNIX V5.1B (Rev. 2650) (docalpha) (pts/11)\n\n\n\n\nlogin: -->
 
@@ -1484,7 +1484,7 @@
     <param pos="0" name="os.cpe23" value="cpe:/o:hp:tru64:{os.version}"/>
   </fingerprint>
 
-  <fingerprint pattern="HP-UX ([^ ]+) [A-Z]\.([^ ]+) ([^ ]+) ([^ ]+)\s([^ ]+\)).*$">
+  <fingerprint pattern="HP-UX ([^ ]+) [A-Z]\.([^ ]+) ([^ ]+) ([^ ]+)\s([^ ]+\))">
     <description>System HP-UX</description>
     <!-- HP-UX ctout B.11.11 U 9000/800 (tc)\nlogin: -->
 
@@ -1518,7 +1518,7 @@
     <param pos="0" name="hw.device" value="NAS"/>
   </fingerprint>
 
-  <fingerprint pattern="OpenVMS.*Version\sV([^\s]+).*">
+  <fingerprint pattern="OpenVMS.*Version\sV([^\s]+)">
     <description>OpenVMS</description>
     <!--  Welcome to OpenVMS (TM) Alpha Operating System, Version V8.4     - NOT70\n\nUsername: -->
 
@@ -1532,7 +1532,7 @@
     <param pos="1" name="os.version"/>
   </fingerprint>
 
-  <fingerprint pattern="(?m)^SCO OpenServer\(TM\) Release ([^ ]+).*$">
+  <fingerprint pattern="(?m)^SCO OpenServer\(TM\) Release ([^ ]+)">
     <description>SCO OpenServer</description>
     <!-- SCO OpenServer(TM) Release 5 (bomdia.co.za) (ttyp6)\nlogin: -->
 
@@ -1614,7 +1614,7 @@
     <param pos="0" name="hw.product" value="Vigor"/>
   </fingerprint>
 
-  <fingerprint pattern=".*Version\s(\d*.\d*)\/OpenBSD.*">
+  <fingerprint pattern="Version\s(\d*.\d*)\/OpenBSD">
     <description>OpenBSD</description>
     <!-- 220 killer09 FTP server (Version 6.4/OpenBSD/Linux-ftpd-0.17) ready. -->
 
@@ -1703,7 +1703,7 @@
     <param pos="3" name="os.version"/>
   </fingerprint>
 
-  <fingerprint pattern="^HP ([^\s]+) ProCurve Switch">
+  <fingerprint pattern="(?m)^HP ([^\s]+) ProCurve Switch">
     <description>HP ProCurve Switch</description>
     <!-- ==============================================================================\nHP J4121A ProCurve Switch 4000M\n
     Firmware revision v2.2.3\n\nCopyright (C) 1991-2004 Hewlett-Packard Co. All Rights Reserved.\n\n
@@ -1815,7 +1815,7 @@
     <param pos="2" name="os.version"/>
   </fingerprint>
 
-  <fingerprint pattern="(?m)^.*Welcome to MELCO Print Server.*Server Name *: *([^ ]*)\W.*Server Model *: *([^ ]*).*F \/ W Version *: *([^ ]*).*MAC Address *: *(.. .. .. .. .. ..).*$">
+  <fingerprint pattern="(?m)^.*Welcome to MELCO Print Server.*Server Name *: *([^ ]*)\W.*Server Model *: *([^ ]*).*F \/ W Version *: *([^ ]*).*MAC Address *: *(.. .. .. .. .. ..)">
     <description>System is a Buffalo/MELCO Embedded Print Server</description>
     <!-- ***********************************\n* Welcome to MELCO Print Server *\n* Telnet Console *\n***********************************
     \n \nServer Name: PS-B04E8E\nServer Model: LPV 2 - TX 1\nF / W Version: 2.00 J \nMAC Address: AE 32 EA 21 BB E3\n
@@ -1840,7 +1840,7 @@
     <param pos="4" name="host.mac"/>
   </fingerprint>
 
-  <fingerprint pattern="(?m)^AIX Version\W(\d).*">
+  <fingerprint pattern="(?m)^AIX Version\W(\d)">
     <description>System is IBM AIX v</description>
     <!-- AIX Version 6\nCopyright IBM Corporation, 1982, 2007.\nlogin: -->
 
@@ -1854,7 +1854,7 @@
     <param pos="0" name="os.cpe23" value="cpe:/o:ibm:aix:{os.version}"/>
   </fingerprint>
 
-  <fingerprint pattern="(?m)^CIMC Debug Firmware Utility Shell\W([^\s]+).*">
+  <fingerprint pattern="(?m)^CIMC Debug Firmware Utility Shell\W([^\s]+)">
     <description>System is Cisco UCS Device</description>
     <!-- CIMC Debug Firmware Utility Shell\nfake-ucs-device-3-1-p login: -->
 
@@ -2108,6 +2108,223 @@
     </example>
     <param pos="0" name="hw.vendor" value="ACT Security"/>
     <param pos="0" name="hw.device" value="IP Camera"/>
+  </fingerprint>
+
+  <fingerprint pattern="Novus Telnet Interface \(v(\S+)\)">
+    <description>Alpha Technologies Novus UPS</description>
+    <example hw.version="2.00.01">Novus Telnet Interface (v2.00.01)</example>
+    <param pos="0" name="hw.vendor" value="Alpha Technologies"/>
+    <param pos="0" name="hw.device" value="Power Device"/>
+    <param pos="0" name="hw.product" value="Novus UPS"/>
+    <param pos="1" name="hw.version"/>
+  </fingerprint>
+
+  <fingerprint pattern="New Telnet Console Client Attached">
+    <description>Psion Teklogix</description>
+    <example>New Telnet Console Client Attached.</example>
+    <param pos="0" name="hw.vendor" value="Psion Teklogix"/>
+    <param pos="0" name="hw.device" value="Network Appliance"/>
+    <param pos="0" name="hw.product" value="CommServer"/>
+  </fingerprint>
+
+  <fingerprint pattern="UPS SYSTEMS SNMP/Web agent Configuration menu">
+    <description>APC UPS Network Card</description>
+    <example>UPS SYSTEMS SNMP/Web agent Configuration menu</example>
+    <param pos="0" name="hw.vendor" value="APC"/>
+    <param pos="0" name="hw.device" value="Power Device"/>
+    <param pos="0" name="hw.product" value="UPS"/>
+    <param pos="0" name="hw.certainty" value="0.5"/>
+  </fingerprint>
+
+  <fingerprint pattern="(?i)Welcome to (\S+Dome [^\)]+) \d+\.\d+.\d+\.\d+ from">
+    <description>Bosch Dome IP Cameras</description>
+    <example hw.product="AutoDome 800 HD">Welcome to AutoDome 800 HD 1.2.3.4 from 5.6.7.8</example>
+    <example hw.product="FLEXIDOME NDC-455-P">Welcome to FLEXIDOME NDC-455-P 1.2.3.4 from 5.6.7.8</example>
+    <param pos="0" name="hw.vendor" value="Bosch"/>
+    <param pos="0" name="hw.device" value="Web Cam"/>
+    <param pos="1" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="(?:RDL-\d+ Ellipse\s+|Connect-OWS?) .{0,1000} Copyright .{0,1000} Redline Communications Inc">
+    <description>Redline Communication Radios</description>
+    <example>RDL-3000 Ellipse     (c) Copyright 2010-2016  Redline Communications Inc.</example>
+    <example>Connect-OW     (c) Copyright 2010-2016  Redline Communications Inc.</example>
+    <example>Connect-OWS     (c) Copyright 2010-2016  Redline Communications Inc.</example>
+    <param pos="0" name="hw.vendor" value="Redline"/>
+    <param pos="0" name="hw.device" value="WAP"/>
+    <param pos="0" name="hw.product" value="Wireless Radio"/>
+    <param pos="0" name="hw.certainty" value="0.5"/>
+  </fingerprint>
+
+  <fingerprint pattern="Vaddio VNG (\S+) vaddio-doccam-([a-fA-F0-9-]{17})">
+    <description>Vadio VNG DocCom</description>
+    <example hw.version="1.6+snapshot-20170720" host.mac="54-10-EC-31-2A-19">Vaddio VNG 1.6+snapshot-20170720 vaddio-doccam-54-10-EC-31-2A-19</example>
+    <param pos="0" name="hw.vendor" value="Vaddio"/>
+    <param pos="0" name="hw.device" value="Web Cam"/>
+    <param pos="0" name="hw.product" value="DocCam"/>
+    <param pos="1" name="hw.version"/>
+    <param pos="2" name="host.mac"/>
+  </fingerprint>
+
+  <fingerprint pattern="\((FL WLAN \S+)\)">
+    <description>Phoenix Contact Wireless Module</description>
+    <example hw.product="FL WLAN 510X">(FL WLAN 510X)</example>
+    <param pos="0" name="hw.vendor" value="Phoenix Contact"/>
+    <param pos="0" name="hw.device" value="WAP"/>
+    <param pos="1" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="Welcome to i\.CanDoIt (.{0,1000}) v(\S+)">
+    <description>Control Solutions i.CanDoIt PLC</description>
+    <example hw.product="BAS-700 ReMOTE I/O" hw.version="2.47x">Welcome to i.CanDoIt BAS-700 ReMOTE I/O v2.47x</example>
+    <param pos="0" name="hw.vendor" value="Control Solutions"/>
+    <param pos="0" name="hw.device" value="PLC"/>
+    <param pos="1" name="hw.product"/>
+    <param pos="2" name="hw.version"/>
+    <param pos="0" name="hw.certainty" value="0.75"/>
+  </fingerprint>
+
+  <fingerprint pattern="Welcome to the MRV Communications' LX Series Server">
+    <description>MRV Communications LX Series</description>
+    <example>Welcome to the MRV Communications' LX Series Server</example>
+    <param pos="0" name="hw.vendor" value="MRV Communications"/>
+    <param pos="0" name="hw.device" value="Device Server"/>
+    <param pos="0" name="hw.family" value="LX Series"/>
+  </fingerprint>
+
+  <fingerprint pattern="(?m)\*\*\* Lantronix ([\S]+) Device Server \*\*\*(?:\r|\n)+MAC address ([a-fA-F0-9]{12})(?:\r|\n)+Software version V(\S+)">
+    <description>Lantronix device server - w/o Serial</description>
+    <!--
+      *** Lantronix UDS1100-IAP Device Server ***
+      MAC address 0080A3BD0000
+      Software version V6.11.0.0 (150514) UDS1100
+      Press Enter for Setup Mode
+    -->
+
+    <example _encoding="base64" hw.product="UDS1100-IAP" hw.version="6.11.0.0" host.mac="0080A3BD0000">
+      KioqIExhbnRyb25peCBVRFMxMTAwLUlBUCBEZXZpY2UgU2VydmVyICoqKgpN
+      QUMgYWRkcmVzcyAwMDgwQTNCRDAwMDAKClNvZnR3YXJlIHZlcnNpb24gVjYu
+      MTEuMC4wICgxNTA1MTQpIFVEUzExMDAKCgpQcmVzcyBFbnRlciBmb3IgU2V0
+      dXAgTW9kZQo=
+    </example>
+    <param pos="0" name="hw.vendor" value="Lantronix"/>
+    <param pos="0" name="hw.device" value="Device Server"/>
+    <param pos="1" name="hw.product"/>
+    <param pos="2" name="host.mac"/>
+    <param pos="3" name="hw.version"/>
+  </fingerprint>
+
+  <fingerprint pattern="(?m)\*\*\* Lantronix Universal Device Server \*\*\*(?:\r|\n)+Serial Number (\d+)\s+MAC address ([a-fA-F0-9:]{17})(?:\r|\n)+Software version (\S+)">
+    <description>Lantronix device server - w/ Serial</description>
+    <!--
+      *** Lantronix Universal Device Server ***
+      Serial Number 6451000  MAC address 00:20:4A:64:00:00
+      Software version 04.5 (011025)
+      Press Enter to go into Setup Mode
+    -->
+
+    <example _encoding="base64" hw.version="04.5" host.mac="00:20:4A:64:00:00" hw.serial_number="6451000" lantronix.serial_number="6451000">
+      KioqIExhbnRyb25peCBVbml2ZXJzYWwgRGV2aWNlIFNlcnZlciAqKioKU2Vy
+      aWFsIE51bWJlciA2NDUxMDAwICBNQUMgYWRkcmVzcyAwMDoyMDo0QTo2NDow
+      MDowMAoKU29mdHdhcmUgdmVyc2lvbiAwNC41ICgwMTEwMjUpCgpQcmVzcyBF
+      bnRlciB0byBnbyBpbnRvIFNldHVwIE1vZGUK
+    </example>
+    <param pos="0" name="hw.vendor" value="Lantronix"/>
+    <param pos="0" name="hw.device" value="Device Server"/>
+    <param pos="0" name="hw.product" value="UDS"/>
+    <param pos="1" name="lantronix.serial_number"/>
+    <param pos="1" name="hw.serial_number"/>
+    <param pos="2" name="host.mac"/>
+    <param pos="3" name="hw.version"/>
+  </fingerprint>
+
+  <fingerprint pattern="^(TAU-\d+[A-Z]*(?:\.IP)?) login:$$">
+    <description>Eltex TAU model VoIP gateway</description>
+    <example hw.product="TAU-8">TAU-8 login:</example>
+    <example hw.product="TAU-2M.IP">TAU-2M.IP login:</example>
+    <param pos="0" name="os.vendor" value="Eltex"/>
+    <param pos="0" name="os.product" value="{hw.product} Firmware"/>
+    <param pos="0" name="os.device" value="VoIP Gateway"/>
+    <param pos="0" name="hw.vendor" value="Eltex"/>
+    <param pos="1" name="hw.product"/>
+    <param pos="0" name="hw.device" value="VoIP Gateway"/>
+  </fingerprint>
+
+  <fingerprint pattern="(?m)^\**(?:\r|\n)*\**\s*Welcome to (SMG-?\d+[A-Z]?)\s*\**(?:\r|\n)*\**(?:\r|\n)+(\S+) login:\s*$">
+    <description>Eltex SMG model VoIP gateway - banner with model number</description>
+    <!--
+      ********************************************
+      *            Welcome to SMG1016M           *
+      ********************************************
+
+      foo.bar.baz login:
+    -->
+    <example hw.product="SMG1016M" host.name="foo.bar.baz" _encoding="base64">
+      DQ0KDQoNKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioNCg0qI
+      CAgICAgICAgICAgV2VsY29tZSB0byBTTUcxMDE2TSAgICAgICAgICAgKg0KDSoqKioqKioqKi
+      oqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqDQoNDQoNZm9vLmJhci5iYXogbG9
+      naW46IA==
+    </example>
+    <param pos="0" name="os.vendor" value="Eltex"/>
+    <param pos="0" name="os.product" value="{hw.product} Firmware"/>
+    <param pos="0" name="os.device" value="VoIP Gateway"/>
+    <param pos="0" name="hw.vendor" value="Eltex"/>
+    <param pos="1" name="hw.product"/>
+    <param pos="0" name="hw.device" value="VoIP Gateway"/>
+    <param pos="2" name="host.name"/>
+  </fingerprint>
+
+  <fingerprint pattern="^eltex-nv(\d+) login:$">
+    <description>Eltex - NV model IPTV set top box</description>
+    <example hw.model="101">eltex-nv101 login:</example>
+    <example hw.product="NV102">eltex-nv102 login:</example>
+    <param pos="0" name="os.vendor" value="Eltex"/>
+    <param pos="0" name="os.product" value="{hw.product} Firmware"/>
+    <param pos="0" name="os.device" value="IPTV"/>
+    <param pos="1" name="hw.model"/>
+    <param pos="0" name="hw.vendor" value="Eltex"/>
+    <param pos="0" name="hw.product" value="NV{hw.model}"/>
+    <param pos="0" name="hw.device" value="IPTV"/>
+  </fingerprint>
+
+  <fingerprint pattern="&quot;BeerTemp&quot;:.*&quot;FridgeTemp&quot;:">
+    <description>Fermentrack Beer Brewing Monitor</description>
+    <example>T:{"BeerTemp":null,"BeerSet":null,"BeerAnn":null,"FridgeTemp":null,"FridgeSet":null,"FridgeAnn":null,"State":0}</example>
+    <param pos="0" name="hw.device" value="Device"/>
+    <param pos="0" name="os.product" value="Fermentrack"/>
+  </fingerprint>
+
+  <fingerprint pattern="(?m)^Welcome to the SIGMA Spectrum Diagnostic Terminal(?:\r|\n)*Wireless Battery Module \(802\.11[abgn\/]+\)(?:\r|\n)*MAC Address: ((?:[0-9a-f]{2}-?){6}) SW: \d+[\sD]*\d+\s*(?:\r|\n)*Sigma Spectrum SN: (\d+) SW: v([\d.]+)(?:\r|\n)*Radio up since: [\w\s:]+(?:\r|\n)*login:\s*$">
+    <description>Baxter SIGMA Spectrum Infusion System with Wireless Battery Module</description>
+    <!--
+      Welcome to the SIGMA Spectrum Diagnostic Terminal
+
+      Wireless Battery Module (802.11a/b/g/n)
+      MAC Address: 00-40-9d-12-34-56 SW: 20 D29
+      Sigma Spectrum SN: 1234567 SW: v8.00.01
+      Radio up since: Fri Mar  1 03:14:24 2019
+
+      login:
+    -->
+
+    <example host.mac="00-40-9d-12-34-56" hw.serial_number="1234567" os.version="8.00.01" _encoding="base64">
+      V2VsY29tZSB0byB0aGUgU0lHTUEgU3BlY3RydW0gRGlhZ25vc3RpYyBUZXJtaW5hbA0KDQpXa
+      XJlbGVzcyBCYXR0ZXJ5IE1vZHVsZSAoODAyLjExYS9iL2cvbikNCk1BQyBBZGRyZXNzOiAwMC
+      00MC05ZC0xMi0zNC01NiBTVzogMjAgRDI5DQpTaWdtYSBTcGVjdHJ1bSBTTjogMTIzNDU2NyB
+      TVzogdjguMDAuMDENClJhZGlvIHVwIHNpbmNlOiBGcmkgTWFyICAxIDAzOjE0OjI0IDIwMTkN
+      Cg0KbG9naW46IA==
+    </example>
+    <param pos="0" name="os.vendor" value="Baxter"/>
+    <param pos="0" name="os.product" value="SIGMA Spectrum Infusion System Firmware"/>
+    <param pos="0" name="os.device" value="Medical"/>
+    <param pos="3" name="os.version"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:baxter:sigma_spectrum_infusion_system_firmware:{os.version}"/>
+    <param pos="0" name="hw.vendor" value="Baxter"/>
+    <param pos="0" name="hw.product" value="SIGMA Spectrum Infusion System"/>
+    <param pos="0" name="hw.device" value="Medical"/>
+    <param pos="2" name="hw.serial_number"/>
+    <param pos="0" name="hw.cpe23" value="cpe:/h:baxter:sigma_spectrum_infusion_system:-"/>
+    <param pos="1" name="host.mac"/>
   </fingerprint>
 
 </fingerprints>

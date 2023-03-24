@@ -18,6 +18,9 @@ mappings:
       vendor: altn
     aruba_networks:
       vendor: arubanetworks
+    atlassian:
+      products:
+        confluence: confluence_server
     bea:
       products:
         weblogic: weblogic_server
@@ -27,8 +30,6 @@ mappings:
       vendor: cmu
       products:
         cyrus_imap: cyrus_imap_server
-    centos_webpanel:
-      vendor: centos-webpanel
     check_point:
       vendor: checkpoint
     cherokee_project:
@@ -39,6 +40,10 @@ mappings:
     cloudflare:
       products:
         cloudflare_load_balancer: load_balancing
+    control_web_panel:
+      vendor: control-webpanel
+      products:
+        control_web_panel: webpanel
     cpanel:
       products:
         cpanel_service_daemon: cpanel
@@ -64,6 +69,10 @@ mappings:
     google:
       products:
         google_web_services: web_server
+    fortra:
+      vendor: helpsystems
+      products:
+        goanywhere_mft: goanywhere_managed_file_transfer
     ibm:
       products:
         lotus_domino: lotus_domino_server
@@ -103,9 +112,19 @@ mappings:
     manageengine:
       vendor: zohocorp
       products:
+        access_manager_plus: manageengine_access_manager_plus
+        ad360: manageengine_ad360
         adaudit_plus: manageengine_adaudit_plus
+        admanager_plus: manageengine_admanager_plus
+        adselfservice_plus: manageengine_adselfservice_plus
+        analytics_plus: manageengine_analytics_plus
+        assetexplorer: manageengine_assetexplorer
         desktop_central: manageengine_desktop_central
+        endpoint_central: manageengine_desktop_central
         opmanager: manageengine_opmanager
+        pam360: manageengine_pam360
+        servicedesk_plus_msp: manageengine_servicedesk_plus_msp
+        supportcenter_plus: manageengine_supportcenter_plus
     microsoft:
       products:
         active_directory_controller: active_directory
@@ -127,6 +146,8 @@ mappings:
       vendor: mortbay
     munin:
       vendor: munin-monitoring
+    nginx:
+      vendor: f5
     nlnet_labs:
       vendor: nlnetlabs
       products:
@@ -140,6 +161,8 @@ mappings:
     parallels:
       products:
         plesk: parallels_plesk_panel
+    phoenix_contact:
+      vendor: phoenixcontact
     plesk:
       vendor: parallels
     proftpd_project:
@@ -159,6 +182,8 @@ mappings:
         jboss_eap: jboss_enterprise_application_platform
         jbossweb: jboss_web_framework_kit
         red_hat_directory_server: directory_server
+    rundeck:
+      vendor: pagerduty
     serv-u:
       vendor: solarwinds
     squid_cache:
@@ -197,6 +222,12 @@ mappings:
     x.org:
       products:
         x.org_x11: x11
+    xiongmai_technology:
+      vendor: xiongmaitech
+    zaphoyd_studios:
+      vendor: zaphoyd
+      products:
+        websocket++: websocketpp
 
   # The following section contains CPE operating system or 'o' remappings. These will
   # ONLY be used for mapping Recog 'os' attributes.
@@ -208,6 +239,7 @@ mappings:
     apple:
       products:
         ios: iphone_os
+        mac_os: macos
     brocade:
       vendor: broadcom
       products:
@@ -220,6 +252,7 @@ mappings:
     cisco:
       products:
         adaptive_security_appliance: adaptive_security_appliance_software
+        mds_9000: mds_9000_san-os
         nam: network_analysis_module_software
         pix: pix_firewall_software
         telepresence: telepresence_video_communication_server_software
@@ -238,6 +271,10 @@ mappings:
     debian:
       products:
         linux: debian_linux
+    eltex:
+      vendor: eltex-co
+    fedora_project:
+      vendor: fedoraproject
     hp:
       products:
         ilo: integrated_lights-out_firmware
@@ -277,10 +314,12 @@ mappings:
         ilom: integrated_lights_out_manager_firmware
     palo_alto_networks:
       vendor: paloaltonetworks
+    phoenix_contact:
+      vendor: phoenixcontact
     red_hat:
       vendor: redhat
-      products:
-        fedora_core_linux: fedora_core
+    software_house:
+      vendor: swhouse
     sun:
       products:
         solaris: sunos
@@ -297,28 +336,43 @@ mappings:
         vmware_esxi_server: esxi
     wind_river:
       vendor: windriver
+    xiongmai_technology:
+      vendor: xiongmaitech
 
   # The following section contains CPE hardware or 'h' remappings. These will
   # ONLY be used for mapping Recog 'hw' attributes.
   h:
     apple:
       products:
+        imac_(retina_4k_21.5-inch_late_2015): imac
+        imac_(retina_4k_21.5-inch_2017): imac
         imac_(retina_4k_21.5-inch_2019): imac
         imac_(retina_5k_27-inch_2017): imac
         imac_(retina_5k_27-inch_2019): imac
         imac_(retina_5k_27-inch_2020): imac
+        imac_pro: imac
         macbook_air_(13-inch_2017): macbook_air
+        macbook_air_(13-inch_2018): macbook_air
         macbook_air_(m1_2020): macbook_air
+        macbook_air_(m1_2022): macbook_air
+        macbook_air_(m2_2022): macbook_air
         macbook_air_(retina_13-inch_2018): macbook_air
         macbook_air_(retina_13-inch_2019): macbook_air
         macbook_air_(retina_13-inch_2020): macbook_air
+        macbook_pro_(13-inch_2017_four_thunderbolt_3_ports): macbook_pro
         macbook_pro_(13-inch_2018_four_thunderbolt_3_ports): macbook_pro
+        macbook_pro_(13-inch_2020_four_thunderbolt_3_ports): macbook_pro
+        macbook_pro_(13-inch_2016_two_thunderbolt_3_ports): macbook_pro
+        macbook_pro_(13-inch_2017_two_thunderbolt_3_ports): macbook_pro
         macbook_pro_(13-inch_2019_two_thunderbolt_3_ports): macbook_pro
+        macbook_pro_(13-inch_2020_two_thunderbolt_3_ports): macbook_pro
         macbook_pro_(13-inch_2020): macbook_pro
         macbook_pro_(13-inch_m1_2020): macbook_pro
+        macbook_pro_(14-inch_2021): macbook_pro
         macbook_pro_(15-inch_2018): macbook_pro
         macbook_pro_(15-inch_2019): macbook_pro
         macbook_pro_(16-inch_2019): macbook_pro
+        macbook_pro_(16-inch_2021): macbook_pro
         macbook_pro_(retina_13-inch_early_2015): macbook_pro
         macbook_pro_(retina_15-inch_mid_2015): macbook_pro
     cisco:
@@ -327,16 +381,25 @@ mappings:
     citrix:
       products:
         netscaler_sdx_gateway: netscaler_sdx
+    eltex:
+      vendor: eltex-co
     emc:
       products:
         celerra: celerra_network_attached_storage
     hp:
       products:
         ilo: integrated_lights-out
+        ilo_2: integrated_lights-out_2
+        ilo_3: integrated_lights-out_3
+        ilo_4: integrated_lights-out_4
     kace:
       vendor: dell
       products:
         k1000: kace_k1000_systems_management_appliance
+    phoenix_contact:
+      vendor: phoenixcontact
+    software_house:
+      vendor: swhouse
     tandberg:
       vendor: cisco
     ubiquiti:

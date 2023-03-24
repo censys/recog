@@ -1,3 +1,4 @@
+2N Telekomunikace
 3CX
 3Com
 8x8 Inc.
@@ -32,8 +33,11 @@ AVTECH
 AXIS
 Aastra
 Accelerated Technology
+Ad Aures
 AdGuard
 Adaptec
+AdminDroid
+Adminer
 Adobe
 Adtran
 Aerohive
@@ -41,13 +45,18 @@ Agere Systems
 Agilent
 AirDefense
 AirMagnet
+Aircookie
 Airties
 Akamai
+Alentis Electronics
 Algo
+Alibaba
 AlienVault
 Allegro Software
 Allen-Bradley
 Allied Telesyn
+Allworx
+Alpha Technologies
 Alpha Telecom, Inc. U.S.A.
 Alpine
 Alt-N
@@ -58,6 +67,7 @@ AnyBus
 Apache
 Apple
 Aprelium Technologies
+Aptinex
 ArGoSoft
 Arachni
 Araknis Networks
@@ -90,17 +100,24 @@ Axway
 Azul Systems
 BEA
 BT
+Ballerina
 Bandura Labs
 Bangteng
 Barco
+Barix
 Barracuda
+Baxter
 Berkeley Software Design Inc.
 Bftpd Project
 Bigfoot
+Bird Home Automation
 Bitvise
+Bitwarden
+BlackBox
 Blue Coat
 BlueCat
 Boa
+Bobcat
 Bomgar
 Bosch
 Bose
@@ -110,12 +127,15 @@ Broadcom
 Brocade
 Brother
 Buffalo
+Busybox
 C&D Technologies
 C-Phone Corporation
 CA
+CBT
 CDVI
 CSM
 Cabletron
+Cacti
 CaddyServer
 Calibre-Web Project
 Calient
@@ -128,7 +148,6 @@ Caucho
 Celery
 Cellopoint
 CentOS
-CentOS WebPanel
 Ceph
 Cesanta
 Chainpoint
@@ -163,13 +182,17 @@ Conectiva
 Conexant
 Congruency, Inc.
 ConnectWise
+Control Solutions
+Control Web Panel
 Couchbase
 Cradlepoint
 Crestron
 Critical Path
+CrowCPP
 CrushFTP
 CrystalVoice Communications
 Cumulus
+CyberPower
 Cyberoam
 D J Bernstein
 D-Link
@@ -214,6 +237,7 @@ Eclipse
 Ektron
 Elastic
 Eltek
+Eltex
 EmbedThis
 Embedthis
 Emby
@@ -227,6 +251,8 @@ EqualLogic
 Equivalence (OpenH323)
 Ericsson
 Eudora
+Evolis
+Ewon
 ExtraHop
 Extreme Networks
 Extron
@@ -235,11 +261,14 @@ FUHO
 FUJI XEROX
 Facebook
 FarSite Communications
+FastHTTP Project
 FatWire
 Fedora Project
+Ferner
 Ferrari Electronik GmbH
 Fidelis
 Fidelix
+FileRun
 Filezilla-Project
 FireEye
 Firefly
@@ -249,12 +278,15 @@ Flussonic
 Flyspray
 Folding@home
 Fortinet
+Fortra
 Foscam
 Foundry
 Foundry Networks
 FreeBSD
 FreePBX
 FreeSWITCH
+Freebox
+FreshTomato
 Fuji Xerox
 Fujitsu
 Fujitsu Siemens
@@ -263,6 +295,7 @@ GFI
 GNU
 GPT Video Systems
 GStreamer
+Gallagher
 GarrettCom
 Gene6
 General Dynamics
@@ -272,12 +305,15 @@ Genivia
 Genscape
 Gentoo
 Gerrit
+GigaBlue
 Gigamon
+Gigaset
 GitHub
 GitLab
 Gitea
 Global Technology Associates
 GlobalScape
+GoGogate
 Gogs
 Google
 Gordano
@@ -304,11 +340,13 @@ HiSilicon
 Hikvision
 HipServ
 Hipcam
+Home-Assistant
 Honeywell
 Huawei
 Huawei-3com
 Hubitat
 Hummingbird Ltd.
+Hydra Project
 IBHsofte
 IBM
 INDECT
@@ -361,11 +399,13 @@ Kyocera
 Kyocera Mita
 LANCOM Systems
 LANDesk
+LG
 LINX
 Labtam
 Lanier
 Lansweeper
 Lantronix
+Laravel
 Leadtek Research Inc.
 Lencore
 Lenel
@@ -376,17 +416,21 @@ Liebert
 Lifesize
 LigoWave
 Ligowave
+Lime Technologies
 Linksys
 Linux
 LiteSpeed Technologies
 LiveWorks Limited
 Logitech
+Lorex
 Lotus
 Loxone
 Lucent
 Lynx Technology
 Lyris
 MBP Kommunikationssysteme GmbH
+MGT-COMMERCE GmbH
+MITRE
 MPI Technologies
 MPS Software
 MRV Communications
@@ -400,6 +444,7 @@ ManageEngine
 Mandriva
 Marconi Communications
 MariaDB
+Mayan-EDMS
 Mbedthis Software
 McAfee
 Media5 Corporation
@@ -443,6 +488,7 @@ NLnet Labs
 NTP
 NVIDIA
 Nagios
+Nanoleaf
 NcFTP Software
 Neoscale
 Nero
@@ -454,6 +500,7 @@ NetData
 NetIQ
 NetSarang Computer, Inc.
 NetWin
+Netgate
 Netgear
 Netia
 Netopia
@@ -466,13 +513,16 @@ Network Alchemy Limited
 Network Equipment Technologies
 Neustar
 Nextcloud
+Nightmare Software
 Nokia
 Nokia-Siemens
 Nominum
 Nortel
 Norton
 Novell
+Nuuo
 OPNsense
+OWASP
 Objective Communications
 Observium
 Oce
@@ -481,6 +531,7 @@ Oki
 Okidata
 Open Text
 OpenBSD
+OpenKM
 OpenLDAP
 OpenMediaVault
 OpenNAC
@@ -507,9 +558,11 @@ Palm
 Palo Alto Networks
 Panasonic
 Panduit
+Papermerge
 Paradyne
 Parallels
 Paramiko
+Patton
 Paul Smith Computer Services
 Pelco
 Percona
@@ -517,12 +570,14 @@ Perl
 Phacility
 Philips
 Philips Video Conferencing Systems
+Phoenix Contact
 Pi-hole
 PictureTel
 Plain Black
 Plex
 Plixer
 Polatis
+Poly
 Polycom
 Portainer
 Postfix
@@ -532,11 +587,13 @@ PowerWare
 Pragma Systems
 Pro Group
 ProFTPD Project
+ProSoft Technology
 Process Software
 Progress
 Prometheus
 Pronet
 Proxmox
+Psion Teklogix
 Pulse Secure
 Pure Storage
 PureFTPd
@@ -561,6 +618,7 @@ RealVNC Ltd.
 Rectifier Technologies
 Red Hat
 Redback Networks
+Redline
 Redmine
 Rhino Software
 Ricoh
@@ -594,6 +652,7 @@ STARFACE GmhH
 SUSE
 SafeNet
 Sage
+SalesAgility
 Samba
 Samsung
 Sangoma
@@ -601,6 +660,7 @@ SapporoWorks
 Satelitech
 Savin
 Scalix
+Schneider Electric
 Schneider Rundfunkwerke AG
 Science Dynamics Corporation
 Science Logic
@@ -613,11 +673,13 @@ Segger
 Sendmail
 Sequent
 Sercomm
+SerenityOS
 Serome Technology, Inc.
 Serv-U
-ServerTech
+Server Technology
 Sharp
 ShellInABox
+Shelly
 Shenzhen Reecam Tech. Ltd.
 ShoreTel
 Siebel
@@ -630,6 +692,7 @@ SmoothWall
 SnapServer
 Sofrel
 Softing
+Software House
 SolarWinds
 SonarQube
 SonicWall
@@ -642,6 +705,7 @@ Spiceworks
 Spirent Communications
 SpliceCom
 Splunk
+SpotterRF
 Squid Cache
 Standard Networks
 StarNet Communications Corp.
@@ -653,6 +717,7 @@ StreamComm
 SuSE
 Sun
 Super Micro
+Supervisord
 Swagger
 Swissvoice
 Sybase
@@ -660,12 +725,10 @@ Symantec
 Symbol
 Symbol Technologies Inc.
 Symplified
-Synacor
 Syndeo Corp.
 Synology
 SysMaster Corporation
 Systech
-Teradici
 TIS
 TLD
 TP-LINK
@@ -673,18 +736,22 @@ TRENDnet
 TVersity
 TYPO3
 Tableau
+Talend
 Tandberg
 Taobao
 Tasman Networks
+TeamSpeak
 Technicolor
 Tektronix
 Teldat H. Kruszynski, M. Cichocki Sp. J.
 TeleStream Technologies, Inc.
 TeleWare
+Teledyne FLIR
 Telliris
 Telxon Corporation
 Tenable
 Tencent
+Teradici
 Thekelleys
 Thomson
 TigerVNC
@@ -696,6 +763,8 @@ Tinyproxy Project
 Tivo
 Tobit Software
 Tokutek
+Tomato
+TomatoUSB
 Tor Project
 TornadoWeb
 Toshiba
@@ -714,13 +783,18 @@ Ubiquiti
 Ubuntu
 UnboundID
 Unica
+Unify
 Unisys
 UnitedLinux
+VBrick
 VMware
 VTEL
+Vaddio
+Valcom
 VanDyke Software
 Vanguard Managed Solutions
 Varnish-cache
+Vaultwarden
 VcXsrv
 Vegastream
 Vermillion
@@ -736,25 +810,29 @@ VocalTec Communications, Inc.
 Västgöta-Data AB
 WFTPServer
 WRQ, Inc.
+WSO2
 Washington University
 WatchGuard
 WeOnlyDo
 WebTrends
 Webmin
+Weidmüller
 Westbay Engineers
 Westell
 Western Digital
 White Box
+Wifx
 Wildix
 Wind River
 Wowza
 Wowza Media Systems
+Wyze
 X.Org
 XAMPP
 XFree86
 XRoads
 Xerox
-Xiongmai Tech
+Xiongmai Technology
 Xiph
 Xiph.org
 Xitami
@@ -769,13 +847,18 @@ Youngzsoft
 ZMailer
 ZTE
 Zabbix
-ZebraNet
+Zaphoyd Studios
+Zebra
 Zed Shaw
+Zimbra
 Zyxel
 aCola
 axTLS Project
 cPanel
 cz.nic
+darkhttpd Project
+darkstat Project
+dotCMS
 enGenius
 estos
 etherpad
@@ -783,18 +866,26 @@ exim
 gdnsd
 home.pl
 i.LON
+iRobot
 iTach
+iXsystems
 innovaphone
 libssh
 lighttpd
+mitmproxy
 mod_ssl
 mod_wsgi
+mongo-express Project
 nginx
 ninenines
 noVNC
+ntop
+openHAB
 ownCloud
 pfSense
+phpMyAdmin
 port25
+qdPM
 qmail
 rPath
 vsFTPd Project

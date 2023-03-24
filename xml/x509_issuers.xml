@@ -106,6 +106,7 @@
     <param pos="0" name="hw.vendor" value="Google"/>
     <param pos="0" name="hw.product" value="Chromecast"/>
     <param pos="0" name="hw.certainty" value="0.5"/>
+    <param pos="0" name="hw.cpe23" value="cpe:/h:google:chromecast:-"/>
     <param pos="0" name="chromecast.generation" value="1"/>
   </fingerprint>
 
@@ -127,6 +128,7 @@
     <param pos="0" name="hw.vendor" value="Google"/>
     <param pos="0" name="hw.product" value="Chromecast"/>
     <param pos="0" name="hw.certainty" value="0.5"/>
+    <param pos="0" name="hw.cpe23" value="cpe:/h:google:chromecast:-"/>
     <param pos="1" name="chromecast.generation"/>
     <param pos="2" name="chromecast.capabilities"/>
   </fingerprint>
@@ -225,7 +227,7 @@
   <fingerprint pattern="^CN=Temporary CA [a-fA-F0-9]{8}\-[a-fA-F0-9]{4}\-[a-fA-F0-9]{4}\-[a-fA-F0-9]{4}\-[a-fA-F0-9]{12},OU=Temporary CA">
     <description>Cisco Video Communication Server</description>
     <example>CN=Temporary CA 218131fe-8af4-11e7-aa6e-9950d6bbaf74,OU=Temporary CA 218131fe-8af4-11e7-aa6e-9950d6bbaf74,O=Temporary CA 218131fe-8af4-11e7-aa6e-9950d6bbaf74</example>
-    <param pos="0" name="hw.device" value="Video Conference"/>
+    <param pos="0" name="hw.device" value="Video Conferencing"/>
     <param pos="0" name="hw.vendor" value="Cisco"/>
     <param pos="0" name="hw.product" value="TelePresence"/>
   </fingerprint>
@@ -355,6 +357,60 @@
     <param pos="0" name="service.vendor" value="CaddyServer"/>
     <param pos="0" name="service.product" value="Caddy"/>
     <param pos="0" name="service.cpe23" value="cpe:/a:caddyserver:caddy:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^CN=Avaya cu360 (\S+)$">
+    <description>Avaya Video Conferencing Device - CU360</description>
+    <example hw.serial_number="11YT11111111">CN=Avaya cu360 11YT11111111</example>
+    <param pos="0" name="hw.vendor" value="Avaya"/>
+    <param pos="0" name="hw.device" value="Video Conferencing"/>
+    <param pos="0" name="hw.product" value="CU360"/>
+    <param pos="1" name="hw.serial_number"/>
+  </fingerprint>
+
+  <fingerprint pattern="^CN=Roomba CA,OU=\S+,O=iRobot,L=Bedford,ST=MA,C=US$">
+    <description>Roomba Device</description>
+    <example hw.product="Roomba" hw.vendor="iRobot">CN=Roomba CA,OU=HBU,O=iRobot,L=Bedford,ST=MA,C=US</example>
+    <param pos="0" name="hw.vendor" value="iRobot"/>
+    <param pos="0" name="hw.device" value="Device"/>
+    <param pos="0" name="hw.product" value="Roomba"/>
+  </fingerprint>
+
+  <fingerprint pattern="(?i)^CN=\S+,OU=FreshTomato Team,O=FreshTomato,L=Columbus,ST=Ohio,C=US(?:.*)$">
+    <description>FreshTomato Router Firmware</description>
+    <example>CN=192.168.1.1,OU=FreshTomato Team,O=FreshTomato,L=Columbus,ST=Ohio,C=US</example>
+    <param pos="0" name="os.vendor" value="FreshTomato"/>
+    <param pos="0" name="os.family" value="Linux"/>
+    <param pos="0" name="os.product" value="FreshTomato"/>
+    <param pos="0" name="os.device" value="Router"/>
+  </fingerprint>
+
+  <fingerprint pattern="(?i)^SERIALNUMBER=(\d+),CN=(\S+),OU=ST-VS,O=Bosch Sicherheitssysteme GmbH,L=Grasbrunn,C=DE">
+    <description>Bosch Device</description>
+    <example hw.serial_number="111111111111111111" host.mac="00-07-5f-11-11-11">SERIALNUMBER=111111111111111111,CN=00-07-5f-11-11-11,OU=ST-VS,O=Bosch Sicherheitssysteme GmbH,L=Grasbrunn,C=DE</example>
+    <param pos="0" name="os.vendor" value="Bosch"/>
+    <param pos="0" name="hw.vendor" value="Bosch"/>
+    <param pos="1" name="hw.serial_number"/>
+    <param pos="2" name="host.mac"/>
+  </fingerprint>
+
+  <fingerprint pattern="^CN=Proxmox Virtual Environment,OU=[a-f0-9-]+,O=PVE Cluster Manager CA$">
+    <description>Proxmox open-source virtualization platform</description>
+    <example>CN=Proxmox Virtual Environment,OU=dd69676f-e203-490e-b040-79b75ed6a9d7,O=PVE Cluster Manager CA</example>
+    <param pos="0" name="service.vendor" value="Proxmox"/>
+    <param pos="0" name="service.product" value="Virtual Environment"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:proxmox:virtual_environment:-"/>
+    <param pos="0" name="os.vendor" value="Proxmox"/>
+    <param pos="0" name="os.family" value="Linux"/>
+    <param pos="0" name="os.product" value="Proxmox"/>
+  </fingerprint>
+
+  <fingerprint pattern="^CN=minikubeCA$">
+    <description>Kubernetes minikube</description>
+    <example>CN=minikubeCA</example>
+    <param pos="0" name="service.vendor" value="Kubernetes"/>
+    <param pos="0" name="service.product" value="minikube"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:kubernetes:minikube:-"/>
   </fingerprint>
 
 </fingerprints>
