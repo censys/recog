@@ -5,23 +5,32 @@
 389 Directory Server
 3CX Web Server
 4690 FTP Server
+AD360
 ADAudit Plus
+ADManager Plus
+ADSelfService Plus
 AIOHTTP
 AOS
+API Manager
 APIC
 ARRIS
+ASDM
 ASM
 ASP.NET
 Abyss Web Server X1
 Abyss Web Server X2
 Access Manager
+Access Manager Plus
 Active Directory Controller
 Active Intelligence Engine
 ActiveMQ
 AdGuard Home
+Adminer
+Advanced Web Server
 AirTunes
 Airflow
 Alteon Web Switch
+Analytics Plus
 Android Debug Database
 AnswerX
 Antivirus for Gateways
@@ -29,26 +38,34 @@ Apache Tomcat HTTP Connector
 AppleShare IP Mail Server
 Application Load Balancer
 Application Protection System, Enterprise
+Application Server
 Application Server Portal
 Application Server Web Cache
 Appweb
 Arachni
 Artifactory
 Aspen
+AssetExplorer
 Aura Communication Manager
 AuthServ
 Authoritative Server
 Avahi
 Azure App Service on Azure Stack
+Azure Application Gateway
 BIG-IP LTM
 BIND
 BRCM400
+Ballerina
+BaseHTTP
 Bftpd
 Bigfoot Email Tools
+BinderHub
+Bitbucket
 BlackJumboDog
 BladeSystems
 Boa
 Bugzilla
+CALDERA
 CCProxy
 CMS
 CMS400.NET
@@ -57,13 +74,15 @@ CODA
 CRM
 CUPS
 CacheServe
+Cacti
 Caddy
 CakePHP
 Calibre-Web
 CallPilot
+Carbon
+Castopod
 Celerra
 CentOS Directory Server
-CentOS Web Panel
 Cherokee
 CherryPy
 Chronograf
@@ -71,10 +90,12 @@ ClearPass Policy Manager
 Cloud C2
 CloudFlare Load Balancer
 CloudFront Load Balancer
+CloudPanel
 Cobalt Strike Listener
 CockroachDB
 Code Review
 ColdFusion
+Collaboration
 Collaboration Server
 Commerce Server
 Communication Broker
@@ -85,13 +106,16 @@ ConnectUPS
 Consul
 Content Server
 Control
+Control Web Panel
 CouchDB
 Couchbase Server
 Courier IMAP
 Courier POP
+Covenant
 Cowboy
 Coyote
 Cross Web Server
+Crow
 CrushFTP Web Interface
 Cygwin X Server Project
 Cyrus IMAP
@@ -118,6 +142,8 @@ Dovecot
 Drive
 Dropbear SSH
 Druid
+Duo Certifier
+Duo Device Health
 Dynamo
 E-mail Firewall
 E-mail Services
@@ -131,14 +157,17 @@ Email Appliance
 Email Security
 Email Security Gateway
 Embedded SSH Server
+Endpoint Central
 Endpoint Protection Manager
 Enterprise
+Enterprise Integrator
 Envoy
 Exchange 2000 Server
 Exchange 2003 Server
 Exchange 2007 Server
 Exchange Server
 Exchange Server 5.5
+Express WebTools
 Expressway
 FTGate
 FTP
@@ -147,8 +176,10 @@ FTP Server
 FTPD
 FUPPES
 FWTK
+FastHTTP
 FastTrack Server
 Fiery Print Server
+FileRun
 FileZilla Server
 Firewall-1
 Fireware XTM
@@ -160,6 +191,7 @@ Flyspray
 FortiVoice
 FortressSSH Server
 FreSSH
+FreeNAS
 FreeSWITCH
 Fusion Middleware
 GHost
@@ -170,7 +202,9 @@ Gerrit
 GitLab
 Gitea
 GlassFish Server
+GnuTLS
 GoAhead Webserver
+GoAnywhere MFT
 Gogs
 Google Front End
 Google Web Services
@@ -186,17 +220,21 @@ HTTPD
 Hadoop Web Admin
 Help Desk Server
 Hikvision Web Server
+Home-Assistant
 Horizon
 HttpProxy
 Hummingbird Exceed X server
+Hydra
 IBM Domino
 IIS
+ILOM
 IMail Server
 IOS
 IPVA
 ISEE
 Icecast
 Idea Web Server
+Identity Server
 Ignition Gateway
 InfluxDB
 InsightVM
@@ -226,7 +264,10 @@ Jenkins
 JetDirect
 Jetty
 Jira
+Jira Service Management
 Joom!Fish
+Jupyter Server
+JupyterHub
 KM FTPD
 KM-MFP-HTTP
 Kamailio
@@ -242,6 +283,7 @@ LDAP Agent for eDirectory
 LDAP Server
 LLBServer
 Lansweeper
+Laravel
 LibreNMS
 License Manager
 Licensing Manager
@@ -261,6 +303,8 @@ Mail Server
 Mail-Max
 MailEnable
 MailSite
+ManageEngine Password Manager Pro
+ManageEngine ServiceDesk Plus
 Management Agent
 Management Console
 Management Server
@@ -268,8 +312,10 @@ Management Service
 MariaDB
 Mastodon
 MaxScale
+Mayan EDMS
 Media Server
 MediaSense
+Medusa
 Mercury Mail Transport System
 Merlin
 Messaging Gateway
@@ -329,13 +375,17 @@ Niagara AX
 Node
 Notebook
 Nucleus SNMP Agent
+Nuggets Learning Server
+Object Storage Service
 Observium
+Office 365 Reporter
 OpManager
 Open Directory
 Open Stack Platform Director
 OpenAdStream
 OpenEdge Explorer
 OpenFire
+OpenKM
 OpenLDAP
 OpenManage
 OpenMediaVault
@@ -344,6 +394,7 @@ OpenSER
 OpenSIPS
 OpenSMTPD
 OpenSSH
+OpenSearch
 OpenText Exceed
 OpenVMS
 OpenVPN Access Server
@@ -353,12 +404,14 @@ Orion Platform
 Outlook Web Access
 OzymanDNS
 PA Firewall
+PAM360
 PBX
 PHP
 PMS
 PMail Server
 PWS
 Panorama Server
+Papermerge
 Paramiko
 Percona Server
 Perl
@@ -382,12 +435,14 @@ Pure-FTPd
 QTSS
 QVT/Net
 Qpopper
+R1Soft Server Backup Manager
 RT
 Rapid Logic
 RealServer
 RealVNC
 Recursor
 Red Hat Directory Server
+Redis Commander
 Redmine
 Reflection
 Reflection for Secure IT
@@ -395,6 +450,7 @@ ReflectionX
 RemoteView
 Resin
 Resolver
+Restlet
 Reverse Channel Proxy
 RomPager
 RomSShell
@@ -436,6 +492,8 @@ Sentinel Keys Server
 Sentinel Protection Server
 Serv-U
 Serv-U FTP Server
+Server
+ServiceDesk Plus MSP
 ShellInABox
 SimpleDB
 SimpleHTTP
@@ -445,7 +503,9 @@ SmartDNS
 SmartSense Tool
 SmbFTPD
 Snowball
+Solr
 SonarQube
+Spark
 SpeedTouch
 Splunk
 Squeezebox
@@ -453,11 +513,14 @@ Squid
 StarNet X-Win32
 Streaming Engine
 Stronghold
+SuiteCRM
 Sun Directory Proxy Server
 Sun Directory Server
 Sun Java System Directory Server
 Sun ONE Directory Server
 Sunny WebBox
+Supervisor
+SupportCenter Plus
 SurgeFTP
 Swagger UI
 Sync Gateway
@@ -467,10 +530,12 @@ TCPIP POP server
 TUX Web Server
 Tableau Server
 TeamCity
+TeamSpeak
 Tengine
 TestCenter IQ
 Thin
 TigerVNC
+TinyGS
 Tinyproxy
 Tivoli Access Manager for e-business WebSEAL
 Tivoli Storage FlashCopy Manager
@@ -483,10 +548,13 @@ Transportation Management
 Twisted FTPD
 Twisted Web
 Twonky Media Server
+UNMS
 UnboundID Directory Proxy Server
 UnboundID Directory Server
+UniFi
 UniFi Video
 Universal Management Appliance
+Unraid
 Urchin Tracking Module
 Usermin
 VM
@@ -497,6 +565,7 @@ VRP
 VShell
 Varnish
 Vault
+Vaultwarden
 VcXsrv
 View
 Vignette
@@ -507,6 +576,8 @@ VisionFS
 VxWorks CIFS
 WEBrick
 WHM
+WLED
+WSGIServer
 WS_FTP
 WU-FTPD
 WeOnlyDo SSH Server
@@ -520,6 +591,7 @@ WebGUI
 WebLogic
 WebServer
 WebShield
+WebSocket++
 WebSphere
 WebSphere Load Balancer
 WebTrends
@@ -548,8 +620,7 @@ Xvnc
 YNQ
 ZMailer
 Zabbix
-Zimbra
-Zimbra Collaboration Suite
+Zed Attack Proxy
 Zing Vision
 Zope
 alphapd
@@ -558,8 +629,11 @@ bashttpd
 bsnmpd
 cPanel
 cPanel Service Daemon
+darkhttpd
+darkstat
 djbdns
 dnsd
+dotCMS
 eDirectory
 ePolicy Orchestrator
 emHTTPD
@@ -570,6 +644,7 @@ gSOAP
 gdnsd
 httpd
 iLO
+iPlanet Web Server
 iScale
 inetutils ftpd
 ipGENADevice
@@ -579,6 +654,8 @@ libupnp
 lighttpd
 micro_httpd
 mini_httpd
+minikube
+mitmproxy
 mod_access
 mod_access_compat
 mod_actions
@@ -726,16 +803,22 @@ mod_vhost_alias
 mod_watchdog
 mod_wsgi
 mod_xml2enc
+mongo-express
 nginx
 noVNC
+ntopng
+openHAB
 ownCloud Server
 perl
 pfSense
+phpMyAdmin
+qdPM
 qmail
 qpopper-mysql
 raptor
 rbldnsd
 sfcb
+sofia-sip
 sshlib
 thttpd
 tnftpd

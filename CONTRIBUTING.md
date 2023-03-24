@@ -19,7 +19,6 @@ released.  The process for everything is described below.
     1. [Updating CPEs](#updating-cpes)
 1. [Project Operations](#project-operations)
     1. [Landing PRs](#landing-prs)
-    1. [Releasing New Versions](#releasing-new-versions)
 
 ## Contributing Issues / Bug Reports
 
@@ -53,10 +52,15 @@ Generally, this should only need to be done once, or if you need to start over.
    selecting your github account if prompted
 1. Clone `git@github.com:<your-github-username>/recog.git`, replacing
 `<your-github-username>` with, you guessed it, your Github username.
-1. Add the master Recog repository as your upstream:
 
-     ```bash
-    git remote add upstream git://github.com/rapid7/recog.git
+    ```bash
+    git clone git@github.com:<your-github-username>/recog.git
+    ```
+
+1. Add the Rapid7 recog repository as your upstream:
+
+    ```bash
+    git remote add upstream git@github.com:rapid7/recog.git
     ```
 
 1. Update your `.git/config` to ensure that the `remote ["upstream"]` section is configured to pull both branches and PRs from upstream.  It should look something like the following, in particular the second `fetch` option:
@@ -66,7 +70,7 @@ Generally, this should only need to be done once, or if you need to start over.
       url = git@github.com:rapid7/recog.git
       fetch = +refs/heads/*:refs/remotes/upstream/*
       fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*
-     ```
+    ```
 
 1. Fetch the latest revisions, including PRs:
 
@@ -91,14 +95,12 @@ branch will be FOO, but you should obviously change this:
 
 ```bash
 git fetch --all
-git checkout master
-git rebase upstream/master
+git checkout main
+git rebase upstream/main
 git checkout -b FOO
 ```
 
 Now, make your changes, commit as necessary with useful commit messages.
-
-Please note that changes to [lib/recog/version.rb](https://github.com/rapid7/recog/blob/master/lib/recog/version.rb) in PRs are almost never necessary.
 
 Now push your changes to your fork:
 
@@ -112,7 +114,7 @@ Finally, submit the PR.  Navigate to ```https://github.com/<your-github-username
 
 ### Testing
 
-When your PR is submitted, it will be automatically subjected to the full run of tests in [Travis](https://travis-ci.org/rapid7/recog/), however you are encourage to perform testing _before_ submitting the PR.  To do this, simply run `rake tests`.
+When your PR is submitted, it will be automatically subjected to the full run of tests in the [CI workflow](.github/workflows/ci.yml) and the [Verify workflow](.github/workflows/verify.yml), however you are encourage to perform testing _before_ submitting the PR.  To do this, simply run `rake tests`.
 
 [^back to top](#contributing-to-recog)
 
@@ -141,8 +143,9 @@ $ echo 'OpenSSH_6.6p1 Ubuntu-2ubuntu1' | bin/recog_match xml/ssh_banners.xml -
 MATCH: {"matched"=>"OpenSSH running on Ubuntu 14.04", "service.version"=>"6.6p1", "openssh.comment"=>"Ubuntu-2ubuntu1", "service.vendor"=>"OpenBSD", "service.family"=>"OpenSSH", "service.product"=>"OpenSSH", "os.vendor"=>"Ubuntu", "os.device"=>"General", "os.family"=>"Linux", "os.product"=>"Linux", "os.version"=>"14.04", "service.protocol"=>"ssh", "fingerprint_db"=>"ssh.banner", "data"=>"OpenSSH_6.6p1 Ubuntu-2ubuntu1"}
 ```
 
-[^back to top](#contributing-to-recog)
+Additionally, in Visual Studio Code, there is a task (.vscode/tasks.json) which will automatically run recog_verify in the background to watch all the XML fingerprint files (under the xml/ subdirectory of this repository). Additionally, if [fswatch](https://github.com/emcrisostomo/fswatch) is installed, whenever XML fingerprint files are added or modified this task will automatically update the Visual Studio Code user interface and highlight any errors or warnings discovered through recog_verify on the correct file/line. You can also manually run the task by bringing up the Visual Studio Code command menu (cmd + shift + P on mac, or ctrl + shift + P for linux/windows) -> Tasks: Run Task -> Recog Verify). Note that in order for the task to run successfully, you must have a valid ruby installed on your PATH with the gems from `bundle install` installed using bundler for that ruby engine. JRuby is not supported as it has issues related to line numbering due to a bug in Nokogiri.
 
+[^back to top](#contributing-to-recog)
 
 ### Standardizing Vendors, Products, and Services
 
@@ -150,16 +153,17 @@ Given the number of fingerprints in Recog, it can be common for specific product
 To limit the creep of slightly-different-names, the `bin/recog_standardize` script can be used to extract all identifiers and merge them into the known lists.
 
 To get started, run the `recog_standardize` tool:
+
 ```shell
-ruby bin/recog_standardize
+ruby bin/recog_standardize -w xml/*.xml
 ```
 
-Review any new additions to the text files under `identifiers/`. If any of these names are close to an existing name, update the offending fingerprint to use
-the existing name instead. Once the fingerprints are fixed, removed the "extra" names from the identifiers files, and run the tool again.
-
+Review any changes to the text files under `identifiers/`. If any additions are
+similar to an existing name, update the offending fingerprint to use the
+existing name instead. Once the fingerprints are fixed run the tool again and
+verify the results.
 
 [^back to top](#contributing-to-recog)
-
 
 ### Updating CPEs
 
@@ -226,7 +230,7 @@ In short:
       url = git@github.com:rapid7/recog.git
       fetch = +refs/heads/*:refs/remotes/upstream/*
       fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*
-     ```
+    ```
 
 3. Fetch the latest revisions, including PRs:
 
@@ -241,36 +245,18 @@ In short:
     ```
 
 5. Test the PR (see the Testing section above)
-6. Merge with master, re-test, validate and push:
+6. Merge with main, re-test, validate and push:
 
     ```bash
-    git checkout -b upstream-master --track upstream/master
-    git merge -S --no-ff --edit landing-PR # merge the PR into upstream-master
+    git checkout -b upstream-main --track upstream/main
+    git merge -S --no-ff --edit landing-PR # merge the PR into upstream-main
 
     # re-test if/as necessary
-    git push upstream upstream-master:master --dry-run # confirm you are pushing what you expect
+    git push upstream upstream-main:main --dry-run # confirm you are pushing what you expect
 
-    git push upstream upstream-master:master # push upstream-master to upstream:master
+    git push upstream upstream-main:main # push upstream-main to upstream:main
     ```
 
 7. If applicable, release a new version (see next section)
-
-[^back to top](#contributing-to-recog)
-
-### Releasing New Versions
-
-When Recog's critical parts are modified, for example its fingerprints or underlying supporting code, a new version _must_ eventually be released.  These new releases can then be optionally included in projects such as Metasploit or products such as Rapid7's Nexpose in a controlled manner.  Releases for non-functional updates such as updates to documentation are not necessary.
-
-When a new version of Recog is to be released, you _must_ follow the instructions below.
-
-1. If are not already a Recog project contributor for the Recog gem (you'd be listed [here under OWNERS](https://rubygems.org/gems/recog)), become one:
-   1. Get an account on [Rubygems](https://rubygems.org)
-   1. Contact one of the Recog project contributors (listed [here under OWNERS](https://rubygems.org/gems/recog) and have them add you to the Recog gem.  They'll need to run: `gem owner recog -a EMAIL`
-
-1. Edit [lib/recog/version.rb](https://github.com/rapid7/recog/blob/master/lib/recog/version.rb) and increment `VERSION`.  Commit and push to rapid7/recog master.
-
-1. Run `rake release`.  Among other things, this creates the new gem, uploads it to Rubygems and tags the release with a tag like `v<VERSION>`, where `<VERSION>` is replaced with the version from `version.rb`.  For example, if you release version 1.2.3 of the gem, the tag will be `v1.2.3`.
-
-1. If your default remote repository is not `rapid7/recog`, you must ensure that the tags created in the previous step are also pushed to the right location(s).  For example, if `origin` is your fork of recog and `upstream` is `rapid7/master`, you should run `git push --tags --dry-run upstream` to confirm what tags will be pushed and then `git push --tags upstream` to push the tags.
 
 [^back to top](#contributing-to-recog)

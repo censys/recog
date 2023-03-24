@@ -63,6 +63,7 @@ Definity One
 Dell Remote Access Controller
 Digital Copier
 Digital Unix
+Digium Firmware
 Discover
 Document Centre
 Dynix
@@ -81,13 +82,17 @@ Fabric OS
 Fastmark M5
 FaxPress
 Fedora
-Fedora Core Linux
+Fedora Core
+Fermentrack
 Fiery Print Server
 Firepower
 Firewall-1
 Fireware
 FortiOS
 FreeBSD
+FreeNAS Firmware
+Freebox OS
+FreshTomato
 G2 Console Switch
 GAiA OS
 GXP1610 Firmware
@@ -115,6 +120,7 @@ IOS
 IPReach
 IPSO
 IRIX
+IVE OS
 Integrated Lights Out Manager
 Irix
 Isilon OneFS OS
@@ -122,6 +128,7 @@ JetDirect
 Junos OS
 Kamikaze
 KeeneticOS
+LORIX OS
 LX
 Linux
 Linux AMI
@@ -135,10 +142,12 @@ Mac OS
 Mac OS X
 Mac OS X Server
 Management Processor
+Media Server
 Meeting Management
 MegaRAC
 Mergepoint
 Meridian 1 Call Server
+Mongoose OS
 NAM
 NAS4Free
 NEO Tape Library
@@ -146,9 +155,12 @@ NET+OS
 NFVIS
 NRG Printer
 NT
+NTP-2 Firmware
+NTP-RG-1402G Firmware
 NX-OS
 NetBSD
 NetCache
+NetPing Firmware
 NetQue
 NetScaler
 NetScaler Gateway
@@ -166,6 +178,7 @@ OSSIM
 OfficeConnect Cable Modem
 Onboard Administrator
 OneFS
+Onyx
 OpenBSD
 OpenMediaVault
 OpenServer
@@ -190,7 +203,6 @@ Prestige 660HW-D1
 Prestige 660ME-61
 Prime Collaboration Manager
 Print Server
-PrintServer
 Printer
 Printer Board
 ProLiant
@@ -213,10 +225,14 @@ RouterOS
 SCM Manager module
 SCO UNIX
 SEHI
+SIGMA Spectrum Infusion System Firmware
 SINIX
 SL2100 Firmware
+SMG Firmware
 SPA112 Firmware
 SPA122 Firmware
+SPA232D Firmware
+SPA8800 8-Port IP Telephony Gateway Firmware
 SV8100 Firmware
 SV9100 Firmware
 SVR
@@ -224,6 +240,7 @@ ScanFront
 ScreenOS
 Secure Linux
 SecureOS
+Serenity
 SmartEdge OS
 SmartServer
 SmoothWall
@@ -240,6 +257,7 @@ SuperStack 3
 SuperStack 3 Firewall
 SuperStack II
 SureStore Tape Library
+SwOS
 Switch
 TMS zl Module
 TRU64
@@ -250,6 +268,8 @@ Tenable Core
 TetrationOS
 TimOS
 Time Capsule Firmware
+Tomato
+TomatoUSB
 Traverse
 Tru64 Unix
 UCM6202 Firmware
@@ -262,6 +282,7 @@ USG40 firmware
 USG60 firmware
 Ubuntu Linux
 Ultrix
+Unified SIP Phone 3900 Firmware
 UnixWare
 VBrick Rev
 VIDOS-NVR
@@ -318,6 +339,7 @@ X3e 31C-M
 XCC Linux
 XOS
 XenServer
+ZebraNet PrintServer Firmware
 Zentyal
 Zone Director
 ZyNOS firmware
@@ -337,4 +359,5 @@ ipOS
 tvOS
 vManage
 vSphere Management Assistant
+webOS
 z/OS

@@ -73,6 +73,7 @@ GranDSLAM
 HFA
 HP-UX
 HP3000
+HiPath
 HomeConnect
 HotWire
 I-Class
@@ -207,9 +208,9 @@ VRP
 Vantage
 VarioLink
 VarioPrint
+Vigor
 VoIP
 VxWorks
-WAP
 WLSE
 WaveCore
 WiBox
@@ -221,6 +222,7 @@ WorkCentre Pro
 XC
 XPort
 XPress
+ZebraNet
 audioOS
 bizhub
 e-STUDIO

@@ -214,6 +214,17 @@
     <param pos="0" name="hw.device" value="DVR"/>
   </fingerprint>
 
+  <!-- Xiongmai Technology is rebranded by a number of DVR and IP Camera manufacturers -->
+
+  <fingerprint pattern="^NETSurveillance WEB$">
+    <description>NetSurveillance web interface on DVR and IP Camera devices sourced from Xiongmai Technology</description>
+    <example>NETSurveillance WEB</example>
+    <param pos="0" name="service.vendor" value="Xiongmai Technology"/>
+    <param pos="0" name="service.product" value="uc-httpd"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:xiongmaitech:uc-httpd:-"/>
+    <param pos="0" name="os.vendor" value="Xiongmai Technology"/>
+  </fingerprint>
+
   <fingerprint pattern="^FRITZ!Box$">
     <description>AVM FRITZ!Box</description>
     <example>FRITZ!Box</example>
@@ -427,9 +438,14 @@
     <example>Fireware XTM User Authentication</example>
     <param pos="0" name="service.vendor" value="WatchGuard"/>
     <param pos="0" name="service.product" value="Fireware XTM"/>
+    <param pos="0" name="service.device" value="Firewall"/>
     <param pos="0" name="service.cpe23" value="cpe:/a:watchguard:fireware_xtm:-"/>
+    <param pos="0" name="service.component.vendor" value="nginx"/>
+    <param pos="0" name="service.component.product" value="nginx"/>
+    <param pos="0" name="service.component.cpe23" value="cpe:/a:f5:nginx:-"/>
     <param pos="0" name="os.vendor" value="WatchGuard"/>
     <param pos="0" name="os.product" value="Fireware"/>
+    <param pos="0" name="os.device" value="Firewall"/>
     <param pos="0" name="os.cpe23" value="cpe:/o:watchguard:fireware:-"/>
   </fingerprint>
 
@@ -464,9 +480,30 @@
     <param pos="0" name="os.vendor" value="Synology"/>
   </fingerprint>
 
+  <fingerprint pattern="^Synology.nbsp;Router.nbsp;-.nbsp;synology$">
+    <description>Synology Router</description>
+    <example>Synology&amp;nbsp;Router&amp;nbsp;-&amp;nbsp;synology</example>
+    <param pos="0" name="hw.vendor" value="Synology"/>
+    <param pos="0" name="hw.device" value="Router"/>
+    <param pos="0" name="hw.certainty" value="0.7"/>
+  </fingerprint>
+
   <fingerprint pattern="^Web Filter Block Override$">
     <description>Fortinet FortiGate/Fortiguard Web Filter</description>
     <example>Web Filter Block Override</example>
+    <param pos="0" name="os.vendor" value="Fortinet"/>
+    <param pos="0" name="os.family" value="FortiOS"/>
+    <param pos="0" name="os.product" value="FortiOS"/>
+    <param pos="0" name="os.device" value="Firewall"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:fortinet:fortios:-"/>
+    <param pos="0" name="hw.vendor" value="Fortinet"/>
+    <param pos="0" name="hw.family" value="FortiGate"/>
+    <param pos="0" name="hw.device" value="Firewall"/>
+  </fingerprint>
+
+  <fingerprint pattern="^FortiGate$">
+    <description>Fortinet FortiGate Network Firewall</description>
+    <example>FortiGate</example>
     <param pos="0" name="os.vendor" value="Fortinet"/>
     <param pos="0" name="os.family" value="FortiOS"/>
     <param pos="0" name="os.product" value="FortiOS"/>
@@ -549,6 +586,14 @@
     <param pos="0" name="hw.device" value="DVR"/>
   </fingerprint>
 
+  <fingerprint pattern="^Welcome to AmpliFi$">
+    <description>Ubiquiti AmpliFi Router</description>
+    <example>Welcome to AmpliFi</example>
+    <param pos="0" name="hw.vendor" value="Ubiquiti"/>
+    <param pos="0" name="hw.product" value="AmpliFi"/>
+    <param pos="0" name="hw.device" value="Router"/>
+  </fingerprint>
+
   <!-- Various products by Zyxel -->
 
   <fingerprint pattern="^USG60$">
@@ -606,8 +651,8 @@
 
   <fingerprint pattern="^Wowza Streaming Engine 4 (Subscription|Perpetual Pro) Edition (\d\.[\w.]+) build(\d+)$">
     <description>Wowza Streaming Engine</description>
-    <example service.version="4.7.7.01" service.version.version="20190222144406">Wowza Streaming Engine 4 Subscription Edition 4.7.7.01 build20190222144406</example>
-    <example service.edition="Perpetual Pro">Wowza Streaming Engine 4 Perpetual Pro Edition 4.8.8.01 build20201216140014</example>
+    <example service.version="4.7.7.01" service.version.version="20190222144406" service.edition="Subscription">Wowza Streaming Engine 4 Subscription Edition 4.7.7.01 build20190222144406</example>
+    <example service.edition="Perpetual Pro" service.version="4.8.8.01" service.version.version="20201216140014">Wowza Streaming Engine 4 Perpetual Pro Edition 4.8.8.01 build20201216140014</example>
     <param pos="0" name="service.vendor" value="Wowza"/>
     <param pos="0" name="service.product" value="Streaming Engine"/>
     <param pos="1" name="service.edition"/>
@@ -627,6 +672,16 @@
     <param pos="0" name="hw.device" value="Router"/>
   </fingerprint>
 
+  <fingerprint pattern="^MikroTik SwOS$">
+    <description>MikroTik SwOS switch configuration page</description>
+    <example>MikroTik SwOS</example>
+    <param pos="0" name="os.vendor" value="MikroTik"/>
+    <param pos="0" name="os.device" value="Switch"/>
+    <param pos="0" name="os.product" value="SwOS"/>
+    <param pos="0" name="hw.vendor" value="MikroTik"/>
+    <param pos="0" name="hw.device" value="Switch"/>
+  </fingerprint>
+
   <fingerprint pattern="^(?:Welcome to nginx!|Test Page for the Nginx HTTP Server)$">
     <description>Default OS-agnostic nginx</description>
     <example>Welcome to nginx!</example>
@@ -634,7 +689,7 @@
     <param pos="0" name="service.product" value="nginx"/>
     <param pos="0" name="service.family" value="nginx"/>
     <param pos="0" name="service.vendor" value="nginx"/>
-    <param pos="0" name="service.cpe23" value="cpe:/a:nginx:nginx:-"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:f5:nginx:-"/>
   </fingerprint>
 
   <fingerprint pattern="^Test Page for the Nginx HTTP Server on (?:Fedora|EPEL)$">
@@ -643,11 +698,11 @@
     <param pos="0" name="service.product" value="nginx"/>
     <param pos="0" name="service.family" value="nginx"/>
     <param pos="0" name="service.vendor" value="nginx"/>
-    <param pos="0" name="service.cpe23" value="cpe:/a:nginx:nginx:-"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:f5:nginx:-"/>
     <param pos="0" name="os.family" value="Linux"/>
-    <param pos="0" name="os.vendor" value="Red Hat"/>
-    <param pos="0" name="os.product" value="Fedora Core Linux"/>
-    <param pos="0" name="os.cpe23" value="cpe:/o:redhat:fedora_core:-"/>
+    <param pos="0" name="os.vendor" value="Fedora Project"/>
+    <param pos="0" name="os.product" value="Fedora Core"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:fedoraproject:fedora_core:-"/>
   </fingerprint>
 
   <fingerprint pattern="^Welcome to nginx on Debian!$">
@@ -656,7 +711,7 @@
     <param pos="0" name="service.product" value="nginx"/>
     <param pos="0" name="service.family" value="nginx"/>
     <param pos="0" name="service.vendor" value="nginx"/>
-    <param pos="0" name="service.cpe23" value="cpe:/a:nginx:nginx:-"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:f5:nginx:-"/>
     <param pos="0" name="os.vendor" value="Debian"/>
     <param pos="0" name="os.product" value="Linux"/>
     <param pos="0" name="os.cpe23" value="cpe:/o:debian:debian_linux:-"/>
@@ -708,9 +763,10 @@
     <param pos="1" name="hw.product"/>
   </fingerprint>
 
-  <fingerprint pattern="^Netgear Prosafe Plus Switch$">
+  <fingerprint pattern="(?i)^Netgear Prosafe Plus Switch$">
     <description>Netgear Prosafe Plus Switch</description>
     <example>Netgear Prosafe Plus Switch</example>
+    <example>NETGEAR ProSAFE Plus Switch</example>
     <param pos="0" name="os.vendor" value="Netgear"/>
     <param pos="0" name="os.device" value="Switch"/>
     <param pos="0" name="os.product" value="Prosafe Firmware"/>
@@ -733,6 +789,37 @@
     <param pos="0" name="os.product" value="NET+OS"/>
   </fingerprint>
 
+  <fingerprint pattern="^(?:TransPort )?(WR\S+) \(SN: (\d+)\) Configuration and Management$">
+    <description>Digi Cellular Routers</description>
+    <example hw.product="WR44v2" hw.serial_number="888111" digi.serial_number="888111">WR44v2 (SN: 888111) Configuration and Management</example>
+    <example hw.product="WR21" hw.serial_number="888111" digi.serial_number="888111">WR21 (SN: 888111) Configuration and Management</example>
+    <example hw.product="WR44v2" hw.serial_number="888111" digi.serial_number="888111">TransPort WR44v2 (SN: 888111) Configuration and Management</example>
+    <example hw.product="WR44RR" hw.serial_number="888111" digi.serial_number="888111">TransPort WR44RR (SN: 888111) Configuration and Management</example>
+    <example hw.product="WR44" hw.serial_number="888111" digi.serial_number="888111">TransPort WR44 (SN: 888111) Configuration and Management</example>
+    <param pos="0" name="hw.vendor" value="Digi"/>
+    <param pos="0" name="hw.device" value="Router"/>
+    <param pos="1" name="hw.product"/>
+    <param pos="2" name="digi.serial_number"/>
+    <param pos="2" name="hw.serial_number"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Digi (\S+) - ([a-fA-F0-9]{12})">
+    <description>Digi TX Cellular Routers</description>
+    <example hw.product="TX54-Dual-Cellular" host.mac="0040FF100000">Digi TX54-Dual-Cellular - 0040FF100000</example>
+    <param pos="0" name="hw.vendor" value="Digi"/>
+    <param pos="0" name="hw.device" value="Router"/>
+    <param pos="1" name="hw.product"/>
+    <param pos="2" name="host.mac"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Digi Configuration and Management$">
+    <description>Digi Cellular Routers (Generic)</description>
+    <example>Digi Configuration and Management</example>
+    <param pos="0" name="hw.vendor" value="Digi"/>
+    <param pos="0" name="hw.device" value="Router"/>
+    <param pos="0" name="hw.certainty" value="0.25"/>
+  </fingerprint>
+
   <fingerprint pattern="^NPort Web Console$">
     <description>Moxa NPort Terminal Servers</description>
     <example>NPort Web Console</example>
@@ -749,6 +836,14 @@
     <param pos="0" name="hw.vendor" value="Lantronix"/>
     <param pos="0" name="hw.device" value="Device Server"/>
     <param pos="1" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Lantronix WEB-Manager$">
+    <description>Lantronix UDS terminal server</description>
+    <example>Lantronix WEB-Manager</example>
+    <param pos="0" name="hw.vendor" value="Lantronix"/>
+    <param pos="0" name="hw.device" value="Device Server"/>
+    <param pos="0" name="hw.product" value="UDS"/>
   </fingerprint>
 
   <fingerprint pattern="^(KN\S+) - Cover$">
@@ -826,11 +921,13 @@
   </fingerprint>
 
   <fingerprint pattern="^Sentry Switched CDU$">
-    <description>Sentry Switched CDU</description>
+    <description>Server Technology Sentry Switched CDU</description>
     <example>Sentry Switched CDU</example>
-    <param pos="0" name="hw.vendor" value="ServerTech"/>
-    <param pos="0" name="hw.device" value="Power Device"/>
+    <param pos="0" name="os.vendor" value="Server Technology"/>
+    <param pos="0" name="os.product" value="{hw.product} Firmware"/>
+    <param pos="0" name="hw.vendor" value="Server Technology"/>
     <param pos="0" name="hw.product" value="Sentry Switched CDU"/>
+    <param pos="0" name="hw.device" value="Power Device"/>
   </fingerprint>
 
   <fingerprint pattern="^Emerson Network Power Rack PDU Card$">
@@ -1173,6 +1270,23 @@
     <param pos="1" name="hw.serial_number"/>
   </fingerprint>
 
+  <fingerprint pattern="^Agilent E5810 \(([a-fA-F0-9-]{17})\)$">
+    <description>Agilent E5810 Instrument Gateway Device</description>
+    <example host.mac="00-30-D3-01-01-01">Agilent E5810 (00-30-D3-01-01-01)</example>
+    <param pos="0" name="hw.vendor" value="Agilent"/>
+    <param pos="0" name="hw.device" value="Test Instrument"/>
+    <param pos="0" name="hw.product" value="E5810 Gateway Device"/>
+    <param pos="1" name="host.mac"/>
+  </fingerprint>
+
+  <fingerprint pattern="^LXI - Agilent Technologies - N1913A -  EPM Series Power Meter$">
+    <description>Agilent N1913A EPM Series Power Meter</description>
+    <example>LXI - Agilent Technologies - N1913A -  EPM Series Power Meter</example>
+    <param pos="0" name="hw.vendor" value="Agilent"/>
+    <param pos="0" name="hw.device" value="Test Instrument"/>
+    <param pos="0" name="hw.product" value="N1913A Power Meter"/>
+  </fingerprint>
+
   <fingerprint pattern="^Polycom - Configuration Utility$">
     <description>Polycom IP Phone</description>
     <example>Polycom - Configuration Utility</example>
@@ -1204,6 +1318,15 @@
     <param pos="0" name="hw.vendor" value="Cisco"/>
     <param pos="0" name="hw.device" value="VoIP"/>
     <param pos="1" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="^(SPA\S+) Device Information \(SEP(\S+)\)$">
+    <description>Cisco IP Phone - SPA504G</description>
+    <example hw.product="SPA504G" host.mac="0123456789ab">SPA504G Device Information (SEP0123456789ab)</example>
+    <param pos="0" name="hw.vendor" value="Cisco"/>
+    <param pos="0" name="hw.device" value="VoIP"/>
+    <param pos="1" name="hw.product"/>
+    <param pos="2" name="host.mac"/>
   </fingerprint>
 
   <fingerprint pattern="^Cisco (?:SPA Configuration|IP Phone)$">
@@ -1262,6 +1385,7 @@
     <param pos="0" name="os.device" value="Switch"/>
     <param pos="0" name="os.product" value="MDS 9000"/>
     <param pos="1" name="os.version"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:cisco:mds_9000_san-os:{os.version}"/>
   </fingerprint>
 
   <fingerprint pattern="^Stealthwatch Management Console$">
@@ -1320,6 +1444,14 @@
     <param pos="0" name="hw.device" value="Wireless Controller"/>
     <param pos="0" name="hw.product" value="Wireless LAN Controller"/>
     <param pos="0" name="hw.cpe23" value="cpe:/h:cisco:wireless_lan_controller:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Cisco ASDM (\S+)$">
+    <description>Cisco Adaptive Security Device Manager Application</description>
+    <example service.version="6.4(7)">Cisco ASDM 6.4(7)</example>
+    <param pos="0" name="service.vendor" value="Cisco"/>
+    <param pos="0" name="service.product" value="ASDM"/>
+    <param pos="1" name="service.version"/>
   </fingerprint>
 
   <fingerprint pattern="^Duo Access Gateway$">
@@ -1472,6 +1604,36 @@
     <param pos="0" name="hw.product" value="Lencore Sound Manager 2"/>
     <param pos="0" name="os.vendor" value="i.LON"/>
     <param pos="0" name="os.product" value="SmartServer"/>
+  </fingerprint>
+
+  <!-- Various products by Avocent -->
+
+  <fingerprint pattern="^Avocent AutoView ([^/$]+)">
+    <description>Avocent AutoView KVM</description>
+    <example hw.model="3100">Avocent AutoView 3100/3200</example>
+    <example hw.model="3050">Avocent AutoView 3050</example>
+    <param pos="0" name="hw.vendor" value="Avocent"/>
+    <param pos="0" name="hw.device" value="KVM"/>
+    <param pos="1" name="hw.model"/>
+    <param pos="0" name="hw.product" value="AutoView {hw.model}"/>
+  </fingerprint>
+
+  <!-- Various products by Aerohive -->
+
+  <fingerprint pattern="^Aerohive HiveUI$">
+    <description>Aerohive Access Point</description>
+    <example>Aerohive HiveUI</example>
+    <param pos="0" name="hw.vendor" value="Aerohive"/>
+    <param pos="0" name="hw.device" value="WAP"/>
+  </fingerprint>
+
+  <!-- Various products by Ruckus -->
+
+  <fingerprint pattern="^Ruckus Wireless Admin$">
+    <description>Ruckus Wireless Access Point</description>
+    <example>Ruckus Wireless Admin</example>
+    <param pos="0" name="hw.vendor" value="Ruckus"/>
+    <param pos="0" name="hw.device" value="WAP"/>
   </fingerprint>
 
   <!-- Various ICS/OT -->
@@ -1866,12 +2028,84 @@
     <param pos="0" name="service.cpe23" value="cpe:/a:manageengine:desktop_central:-"/>
   </fingerprint>
 
-  <fingerprint pattern="^ManageEngine ADAudit Plus$">
-    <description>ManageEngineADAudit Plus</description>
-    <example>ManageEngine ADAudit Plus</example>
+  <fingerprint pattern="^ADAudit Plus$">
+    <description>ManageEngine ADAudit Plus</description>
+    <example>ADAudit Plus</example>
     <param pos="0" name="service.vendor" value="ManageEngine"/>
     <param pos="0" name="service.product" value="ADAudit Plus"/>
     <param pos="0" name="service.cpe23" value="cpe:/a:zohocorp:manageengine_adaudit_plus:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ManageEngine - ADManager Plus$">
+    <description>ManageEngine ADManager Plus</description>
+    <example>ManageEngine - ADManager Plus</example>
+    <param pos="0" name="service.vendor" value="ManageEngine"/>
+    <param pos="0" name="service.product" value="ADManager Plus"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:zohocorp:manageengine_admanager_plus:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ManageEngine AssetExplorer$">
+    <description>ManageEngine AssetExplorer</description>
+    <example>ManageEngine AssetExplorer</example>
+    <param pos="0" name="service.vendor" value="ManageEngine"/>
+    <param pos="0" name="service.product" value="AssetExplorer"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:zohocorp:manageengine_assetexplorer:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ManageEngine Endpoint Central$">
+    <description>ManageEngine Endpoint Central (formerly Desktop Central)</description>
+    <example>ManageEngine Endpoint Central</example>
+    <param pos="0" name="service.vendor" value="ManageEngine"/>
+    <param pos="0" name="service.product" value="Endpoint Central"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:zohocorp:manageengine_desktop_central:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ManageEngine PAM360$">
+    <description>ManageEngine PAM360</description>
+    <example>ManageEngine PAM360</example>
+    <param pos="0" name="service.vendor" value="ManageEngine"/>
+    <param pos="0" name="service.product" value="PAM360"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:zohocorp:manageengine_pam360:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ManageEngine PasswordManager Pro$">
+    <description>ManageEngine Password Manager Pro</description>
+    <example>ManageEngine PasswordManager Pro</example>
+    <param pos="0" name="service.vendor" value="ManageEngine"/>
+    <param pos="0" name="service.product" value="ManageEngine Password Manager Pro"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:zohocorp:manageengine_password_manager_pro:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ManageEngine Access Manager Plus$">
+    <description>ManageEngine Access Manager Plus</description>
+    <example>ManageEngine Access Manager Plus</example>
+    <param pos="0" name="service.vendor" value="ManageEngine"/>
+    <param pos="0" name="service.product" value="Access Manager Plus"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:zohocorp:manageengine_access_manager_plus:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ManageEngine ServiceDesk Plus$">
+    <description>ManageEngine ServiceDesk Plus</description>
+    <example>ManageEngine ServiceDesk Plus</example>
+    <param pos="0" name="service.vendor" value="ManageEngine"/>
+    <param pos="0" name="service.product" value="ManageEngine ServiceDesk Plus"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:zohocorp:manageengine_servicedesk_plus:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ManageEngine ServiceDesk Plus - MSP$">
+    <description>ManageEngine ServiceDesk Plus MSP</description>
+    <example>ManageEngine ServiceDesk Plus - MSP</example>
+    <param pos="0" name="service.vendor" value="ManageEngine"/>
+    <param pos="0" name="service.product" value="ServiceDesk Plus MSP"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:zohocorp:manageengine_servicedesk_plus_msp:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ManageEngine SupportCenter Plus$">
+    <description>ManageEngine SupportCenter Plus</description>
+    <example>ManageEngine SupportCenter Plus</example>
+    <param pos="0" name="service.vendor" value="ManageEngine"/>
+    <param pos="0" name="service.product" value="SupportCenter Plus"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:zohocorp:manageengine_supportcenter_plus:-"/>
   </fingerprint>
 
   <fingerprint pattern="^(ScanFront \d.+)Web Menu$">
@@ -2044,7 +2278,7 @@
     <description>Pure Storage Appliance</description>
     <example>Pure Storage Login</example>
     <param pos="0" name="hw.vendor" value="Pure Storage"/>
-    <param pos="0" name="hw.device" value="NAS"/>
+    <param pos="0" name="hw.device" value="Storage Appliance"/>
     <param pos="0" name="hw.product" value="Appliance"/>
   </fingerprint>
 
@@ -2287,6 +2521,22 @@
     <param pos="0" name="service.vendor" value="Jupyter"/>
     <param pos="0" name="service.product" value="Notebook"/>
     <param pos="0" name="service.cpe23" value="cpe:/a:jupyter:notebook:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Jupyter Server$">
+    <description>Jupyter Server - backend to Jupyter web applications</description>
+    <example>Jupyter Server</example>
+    <param pos="0" name="service.vendor" value="Jupyter"/>
+    <param pos="0" name="service.product" value="Jupyter Server"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:jupyter:jupyter_server:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^JupyterHub$">
+    <description>JupyterHub - Multi-user server for Jupyter notebooks</description>
+    <example>JupyterHub</example>
+    <param pos="0" name="service.vendor" value="Jupyter"/>
+    <param pos="0" name="service.product" value="JupyterHub"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:jupyter:jupyterhub:-"/>
   </fingerprint>
 
   <fingerprint pattern="^Redirect to userimage: /control/userimage\.html$">
@@ -2731,7 +2981,7 @@
     <example>Rundeck - Login</example>
     <param pos="0" name="service.vendor" value="Rundeck"/>
     <param pos="0" name="service.product" value="Rundeck"/>
-    <param pos="0" name="service.cpe23" value="cpe:/a:rundeck:rundeck:-"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:pagerduty:rundeck:-"/>
   </fingerprint>
 
   <fingerprint pattern="^CrushFTP WebInterface$">
@@ -2969,7 +3219,7 @@
     <example>Log In - Confluence</example>
     <param pos="0" name="service.vendor" value="Atlassian"/>
     <param pos="0" name="service.product" value="Confluence"/>
-    <param pos="0" name="service.cpe23" value="cpe:/a:atlassian:confluence:-"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:atlassian:confluence_server:-"/>
   </fingerprint>
 
   <fingerprint pattern="^System Dashboard - ">
@@ -2979,6 +3229,14 @@
     <param pos="0" name="service.vendor" value="Atlassian"/>
     <param pos="0" name="service.product" value="Jira"/>
     <param pos="0" name="service.cpe23" value="cpe:/a:atlassian:jira:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Log in - Bitbucket$">
+    <description>Atlassian Bitbucket</description>
+    <example>Log in - Bitbucket</example>
+    <param pos="0" name="service.vendor" value="Atlassian"/>
+    <param pos="0" name="service.product" value="Bitbucket"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:atlassian:bitbucket:-"/>
   </fingerprint>
 
   <fingerprint pattern="^(?:Welcome to XAMPP|XAMPP for Linux)">
@@ -3075,7 +3333,7 @@
     <param pos="0" name="service.cpe23" value="cpe:/a:pulsesecure:pulse_connect_secure:-"/>
     <param pos="0" name="os.vendor" value="Pulse Secure"/>
     <param pos="0" name="os.family" value="SSL-VPN"/>
-    <param pos="0" name="os.device" value="SSL-VPN"/>
+    <param pos="0" name="os.device" value="VPN"/>
     <param pos="0" name="os.product" value="Pulse Connect Secure"/>
   </fingerprint>
 
@@ -3086,9 +3344,9 @@
     <param pos="0" name="service.product" value="Media Server"/>
   </fingerprint>
 
-  <fingerprint pattern="^proxmox - Proxmox Virtual Environment$">
+  <fingerprint pattern="^.{1,256} - Proxmox Virtual Environment$">
     <description>Proxmox open-source virtualization platform</description>
-    <example>proxmox - Proxmox Virtual Environment</example>
+    <example>hypervisor - Proxmox Virtual Environment</example>
     <param pos="0" name="service.vendor" value="Proxmox"/>
     <param pos="0" name="service.product" value="Virtual Environment"/>
     <param pos="0" name="service.cpe23" value="cpe:/a:proxmox:virtual_environment:-"/>
@@ -3108,7 +3366,7 @@
   <fingerprint pattern="Lifesize&amp;reg;$">
     <description>Lifesize TelePresence</description>
     <example>Lifesize&amp;reg;</example>
-    <example>400 - Bad Request	Lifesize&amp;reg;</example>
+    <example>400 - Bad Request  Lifesize&amp;reg;</example>
     <param pos="0" name="hw.vendor" value="Lifesize"/>
     <param pos="0" name="hw.device" value="Video Conferencing"/>
     <param pos="0" name="hw.product" value="TelePresence"/>
@@ -3245,6 +3503,697 @@
     <param pos="0" name="service.vendor" value="MoinMoin"/>
     <param pos="0" name="service.product" value="MoinMoin"/>
     <param pos="0" name="service.cpe23" value="cpe:/a:moinmo:moinmoin:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^(\w+) - BlackBox Management Console$">
+    <description>BlackBox Management Console</description>
+    <example host.name="ABC123">ABC123 - BlackBox Management Console</example>
+    <param pos="0" name="hw.vendor" value="BlackBox"/>
+    <param pos="0" name="hw.device" value="Device Server"/>
+    <param pos="0" name="hw.product" value="BlackBox"/>
+    <param pos="1" name="host.name"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Shelly Color Bulb$">
+    <description>Shelly Smart Bulb</description>
+    <example>Shelly Color Bulb</example>
+    <param pos="0" name="os.vendor" value="Cesanta"/>
+    <param pos="0" name="os.product" value="Mongoose OS"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:cesanta:mongoose_os:-"/>
+    <param pos="0" name="hw.vendor" value="Shelly"/>
+    <param pos="0" name="hw.device" value="Light Bulb"/>
+    <param pos="0" name="hw.product" value="Color Bulb"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Shelly (Plug|Dimmer(?: 2)?|Switch)$">
+    <description>Shelly Plug/Dimmer/Switch Devices</description>
+    <example hw.product="Plug">Shelly Plug</example>
+    <example hw.product="Dimmer">Shelly Dimmer</example>
+    <example hw.product="Dimmer 2">Shelly Dimmer 2</example>
+    <example hw.product="Switch">Shelly Switch</example>
+    <param pos="0" name="os.vendor" value="Cesanta"/>
+    <param pos="0" name="os.product" value="Mongoose OS"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:cesanta:mongoose_os:-"/>
+    <param pos="0" name="hw.vendor" value="Shelly"/>
+    <param pos="0" name="hw.device" value="Device"/>
+    <param pos="1" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Shelly[ ]?(RGBW2|1L)$">
+    <description>Shelly Lighting Controller</description>
+    <example hw.product="RGBW2">Shelly RGBW2</example>
+    <example hw.product="1L">Shelly1L</example>
+    <param pos="0" name="os.vendor" value="Cesanta"/>
+    <param pos="0" name="os.product" value="Mongoose OS"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:cesanta:mongoose_os:-"/>
+    <param pos="0" name="hw.vendor" value="Shelly"/>
+    <param pos="0" name="hw.device" value="Device"/>
+    <param pos="1" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="^TinyGS Configuration$">
+    <description>TinyGS LoRa Ground Station Software</description>
+    <example>TinyGS Configuration</example>
+    <param pos="0" name="service.product" value="TinyGS"/>
+  </fingerprint>
+
+  <fingerprint pattern="^WLED$">
+    <description>WLED Controlled Device</description>
+    <example>WLED</example>
+    <param pos="0" name="service.vendor" value="Aircookie"/>
+    <param pos="0" name="service.product" value="WLED"/>
+    <param pos="0" name="service.device" value="Device"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Freebox OS (?:.*)$">
+    <description>Freebox OS on Freebox Set-top Box Devices</description>
+    <example>Freebox OS :: Identification</example>
+    <param pos="0" name="os.vendor" value="Freebox"/>
+    <param pos="0" name="os.product" value="Freebox OS"/>
+    <param pos="0" name="hw.vendor" value="Freebox"/>
+    <param pos="0" name="hw.device" value="Device"/>
+  </fingerprint>
+
+  <fingerprint pattern="^HP UPS Network Module$">
+    <description>HP RT3000 G2 UPS</description>
+    <example>HP UPS Network Module</example>
+    <param pos="0" name="hw.vendor" value="HP"/>
+    <param pos="0" name="hw.device" value="UPS"/>
+  </fingerprint>
+
+  <fingerprint pattern="^UniFi Network$">
+    <description>Ubiquiti UniFi Network Application</description>
+    <example>UniFi Network</example>
+    <param pos="0" name="service.vendor" value="Ubiquiti"/>
+    <param pos="0" name="service.product" value="UniFi"/>
+    <param pos="0" name="service.device" value="Device"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:ui:unifi:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Login to AdminDroid Office 365 Reporter$">
+    <description>AdminDroid Office 365 Reporter Application</description>
+    <example>Login to AdminDroid Office 365 Reporter</example>
+    <param pos="0" name="service.vendor" value="AdminDroid"/>
+    <param pos="0" name="service.product" value="Office 365 Reporter"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Nanoleaf Firmware Upload$">
+    <description>Nanoleaf LED Lighting</description>
+    <example>Nanoleaf Firmware Upload</example>
+    <param pos="0" name="hw.vendor" value="Nanoleaf"/>
+    <param pos="0" name="hw.device" value="Device"/>
+  </fingerprint>
+
+  <fingerprint pattern="^GoGogate - LAN$">
+    <description>GoGogate Garage Door Opener</description>
+    <example>GoGogate - LAN</example>
+    <param pos="0" name="hw.vendor" value="GoGogate"/>
+    <param pos="0" name="hw.device" value="Device"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ASUS Login$">
+    <description>ASUS Router/Network Device</description>
+    <example>ASUS Login</example>
+    <param pos="0" name="hw.vendor" value="Asus"/>
+    <param pos="0" name="hw.device" value="Device"/>
+  </fingerprint>
+
+  <fingerprint pattern="^GigaBlue Quad Plus - OpenWebif$">
+    <description>GigaBlue Quad Plus Satellite TV Receiver</description>
+    <example>GigaBlue Quad Plus - OpenWebif</example>
+    <param pos="0" name="hw.vendor" value="GigaBlue"/>
+    <param pos="0" name="hw.device" value="Device"/>
+    <param pos="0" name="hw.product" value="Quad Plus Receiver"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Barix Instreamer Instreamer$">
+    <description>Barix Instreamer</description>
+    <example>Barix Instreamer Instreamer</example>
+    <param pos="0" name="hw.vendor" value="Barix"/>
+    <param pos="0" name="hw.device" value="Audio Encoder"/>
+    <param pos="0" name="hw.product" value="Instreamer"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Tracker Display$">
+    <description>SpotterRF</description>
+    <example>Tracker Display</example>
+    <param pos="0" name="os.vendor" value="SpotterRF"/>
+    <param pos="0" name="os.family" value="Linux"/>
+    <param pos="0" name="os.certainty" value="0.90"/>
+    <param pos="0" name="hw.vendor" value="SpotterRF"/>
+    <param pos="0" name="hw.device" value="Sensor"/>
+    <param pos="0" name="hw.product" value="Drone Detector"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Polycom (DMA \d+)$">
+    <description>Polycom DMA 7000</description>
+    <example hw.product="DMA 7000">Polycom DMA 7000</example>
+    <param pos="0" name="hw.vendor" value="Polycom"/>
+    <param pos="0" name="hw.device" value="VoIP"/>
+    <param pos="1" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="^VVX(\d{3})$">
+    <description>Polycom VVX VoIP Phones</description>
+    <example hw.model="250">VVX250</example>
+    <param pos="0" name="hw.vendor" value="Polycom"/>
+    <param pos="0" name="hw.device" value="VoIP"/>
+    <param pos="1" name="hw.model"/>
+    <param pos="0" name="hw.product" value="VVX {hw.model}"/>
+  </fingerprint>
+
+  <fingerprint pattern="^(OBi[23]\d{2})">
+    <description>Poly OBI Analog Telephone Adapter</description>
+    <example hw.product="OBi200">OBi200</example>
+    <param pos="0" name="hw.vendor" value="Poly"/>
+    <param pos="0" name="hw.device" value="VoIP"/>
+    <param pos="1" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Alpha Technologies$">
+    <description>Alpha Technologies Novus UPS</description>
+    <example>Alpha Technologies</example>
+    <param pos="0" name="hw.vendor" value="Alpha Technologies"/>
+    <param pos="0" name="hw.device" value="Power Device"/>
+    <param pos="0" name="hw.product" value="Novus UPS"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Network Management Card$">
+    <description>Eaton UPS Network Card</description>
+    <example>Network Management Card</example>
+    <param pos="0" name="hw.vendor" value="Eaton"/>
+    <param pos="0" name="hw.device" value="Power Device"/>
+    <param pos="0" name="hw.product" value="UPS"/>
+    <param pos="0" name="hw.certainty" value="0.5"/>
+  </fingerprint>
+
+  <fingerprint pattern="^UPS Properties$">
+    <description>APC UPS Network Card</description>
+    <example>UPS Properties</example>
+    <param pos="0" name="hw.vendor" value="APC"/>
+    <param pos="0" name="hw.device" value="Power Device"/>
+    <param pos="0" name="hw.product" value="UPS"/>
+    <param pos="0" name="hw.certainty" value="0.5"/>
+  </fingerprint>
+
+  <fingerprint pattern="^HP ([\w ]+) PostScript">
+    <description>HP Printer</description>
+    <example hw.product="Designjet T1200">HP Designjet T1200 PostScript - Supplies</example>
+    <param pos="0" name="hw.vendor" value="HP"/>
+    <param pos="0" name="hw.family" value="JetDirect"/>
+    <param pos="0" name="hw.device" value="Printer"/>
+    <param pos="1" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Radio Configuration/Diagnostic Utility$">
+    <description>ProSoft RadioLinx</description>
+    <example>Radio Configuration/Diagnostic Utility</example>
+    <param pos="0" name="hw.vendor" value="ProSoft Technology"/>
+    <param pos="0" name="hw.device" value="WAP"/>
+    <param pos="0" name="hw.product" value="RadioLinx"/>
+    <param pos="0" name="hw.certainty" value="0.5"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Welcome to ntopng$">
+    <description>ntopng Network Analysis Application</description>
+    <example>Welcome to ntopng</example>
+    <param pos="0" name="service.vendor" value="ntop"/>
+    <param pos="0" name="service.product" value="ntopng"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:ntop:ntopng:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^FreeNAS$">
+    <description>iXsystems FreeNAS</description>
+    <example>FreeNAS</example>
+    <param pos="0" name="service.vendor" value="iXsystems"/>
+    <param pos="0" name="service.product" value="FreeNAS"/>
+    <param pos="0" name="os.vendor" value="iXsystems"/>
+    <param pos="0" name="os.family" value="FreeBSD"/>
+    <param pos="0" name="os.product" value="FreeNAS Firmware"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:ixsystems:freenas_firmware:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Xerox (.{1,1000}) - \d+\.\d+\.\d+\.\d+$">
+    <description>Xerox Color Printer</description>
+    <example hw.product="Color 570">Xerox Color 570 - 100.100.100.101</example>
+    <param pos="0" name="hw.vendor" value="Xerox"/>
+    <param pos="0" name="hw.device" value="Printer"/>
+    <param pos="1" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Web Smart Switch$">
+    <description>3Com Switch</description>
+    <example>Web Smart Switch</example>
+    <param pos="0" name="hw.vendor" value="3Com"/>
+    <param pos="0" name="hw.device" value="Switch"/>
+  </fingerprint>
+
+  <fingerprint pattern="^(Quantum) - (Scalar i\d+) Login Screen$">
+    <description>Quantum Scalar Tape Library</description>
+    <example hw.vendor="Quantum" hw.product="Scalar i80">Quantum - Scalar i80 Login Screen</example>
+    <param pos="0" name="hw.device" value="Tape Library"/>
+    <param pos="1" name="hw.vendor"/>
+    <param pos="2" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Printer Administration$">
+    <description>Weidmüller Printer</description>
+    <example>Printer Administration</example>
+    <param pos="0" name="hw.vendor" value="Weidmüller"/>
+    <param pos="0" name="hw.device" value="Printer"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Machine Identification - (MX-\S+)$">
+    <description>Sharp MX Printer</description>
+    <example hw.product="MX-3071">Machine Identification - MX-3071</example>
+    <param pos="0" name="hw.vendor" value="Sharp"/>
+    <param pos="0" name="hw.device" value="Printer"/>
+    <param pos="1" name="hw.product"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Remote UI: Login: (MF\S+):">
+    <description>Canon MF Printer</description>
+    <example hw.product="MF632C/634C">Remote UI: Login: MF632C/634C: MF632C/634C</example>
+    <param pos="0" name="hw.vendor" value="Canon"/>
+    <param pos="0" name="hw.device" value="Printer"/>
+    <param pos="1" name="hw.product"/>
+    <param pos="0" name="hw.certainty" value="0.8"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Network Video Recorder Login$">
+    <description>Nuuo NVR</description>
+    <example>Network Video Recorder Login</example>
+    <param pos="0" name="hw.vendor" value="Nuuo"/>
+    <param pos="0" name="hw.device" value="DVR"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Evolis Printer$">
+    <description>Evolis Printer</description>
+    <example>Evolis Printer</example>
+    <param pos="0" name="hw.vendor" value="Evolis"/>
+    <param pos="0" name="hw.device" value="Printer"/>
+  </fingerprint>
+
+  <fingerprint pattern="^WyzeOutdoorPlug - ">
+    <description>Wyze Plug Outdoor</description>
+    <example>WyzeOutdoorPlug - Main Menu</example>
+    <param pos="0" name="hw.vendor" value="Wyze"/>
+    <param pos="0" name="hw.device" value="Device"/>
+    <param pos="0" name="hw.product" value="Plug Outdoor"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Aptinex IOT Relay Module - (\d+ Channel) (Rev\S+)?">
+    <description>Aptinex Relay Controller</description>
+    <example aptinex.model="4 Channel" os.version="Rev1.1">Aptinex IOT Relay Module - 4 Channel Rev1.1</example>
+    <param pos="0" name="os.vendor" value="Aptinex"/>
+    <param pos="0" name="hw.vendor" value="Aptinex"/>
+    <param pos="0" name="hw.device" value="Relay Controller"/>
+    <param pos="0" name="hw.product" value="{aptinex.model} Relay Controller"/>
+    <param pos="1" name="aptinex.model"/>
+    <param pos="2" name="os.version"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Diagnoser - Bobcatminer Diagnostic Dashboard$">
+    <description>Bobcat Helium Miner</description>
+    <example>Diagnoser - Bobcatminer Diagnostic Dashboard</example>
+    <param pos="0" name="hw.vendor" value="Bobcat"/>
+    <param pos="0" name="hw.device" value="Device"/>
+    <param pos="0" name="hw.product" value="Helium Miner"/>
+  </fingerprint>
+
+  <fingerprint pattern="^LORIX Manager$">
+    <description>Wifx LORIX One</description>
+    <example>LORIX Manager</example>
+    <param pos="0" name="os.vendor" value="Wifx"/>
+    <param pos="0" name="os.product" value="LORIX OS"/>
+    <param pos="0" name="hw.vendor" value="Wifx"/>
+    <param pos="0" name="hw.device" value="Device"/>
+    <param pos="0" name="hw.product" value="LORIX ONE"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ETERNUS$">
+    <description>Fujitsu ETERNUS Storage Appliance</description>
+    <example>ETERNUS</example>
+    <param pos="0" name="hw.vendor" value="Fujitsu"/>
+    <param pos="0" name="hw.device" value="Storage Appliance"/>
+    <param pos="0" name="hw.product" value="Eternus"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Covenant - Login$">
+    <description>Covenant .NET C2 framework</description>
+    <example>Covenant - Login</example>
+    <param pos="0" name="service.product" value="Covenant"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Login \| CALDERA$">
+    <description>MITRE CALDERA C2 framework</description>
+    <example>Login | CALDERA</example>
+    <param pos="0" name="service.vendor" value="MITRE"/>
+    <param pos="0" name="service.product" value="CALDERA"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:mitre:caldera:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="(?:(\S{1,512}):\d{1,5} / \S{1,512} \| )?phpMyAdmin(?: ([\d.]+(?:-[a-zA-Z0-9]+)?(?:\+\d{8}\.[a-f0-9]{4,40})?))?">
+    <description>phpMyAdmin web interface for MySQL and MariaDB</description>
+    <example>phpMyAdmin</example>
+    <example service.version="2.10.0.2">phpMyAdmin 2.10.0.2</example>
+    <example service.version="5.0.0-rc1">phpMyAdmin 5.0.0-rc1</example>
+    <example service.version="5.3.0-dev">phpMyAdmin 5.3.0-dev</example>
+    <example host.name="10.10.10.10" service.version="5.0.4">10.10.10.10:8080 / db.foo.bar | phpMyAdmin 5.0.4</example>
+    <example host.name="localhost" service.version="5.3.0-dev+20220208.47252f9cf8">localhost:8080 / mysql-server | phpMyAdmin 5.3.0-dev+20220208.47252f9cf8</example>
+    <example host.name="[::ffff:10.10.10.10]" service.version="5.3.0-dev+20220208.47252f9cf8">[::ffff:10.10.10.10]:8080 / mysql-server | phpMyAdmin 5.3.0-dev+20220208.47252f9cf8</example>
+    <param pos="0" name="service.vendor" value="phpMyAdmin"/>
+    <param pos="0" name="service.product" value="phpMyAdmin"/>
+    <param pos="1" name="host.name"/>
+    <param pos="2" name="service.version"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:phpmyadmin:phpmyadmin:{service.version}"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Login - Adminer$">
+    <description>Adminer database management tool</description>
+    <example>Login - Adminer</example>
+    <param pos="0" name="service.vendor" value="Adminer"/>
+    <param pos="0" name="service.product" value="Adminer"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:adminer:adminer:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Home - Mongo Express$">
+    <description>mongo-express web-based MongoDB admin interface</description>
+    <example>Home - Mongo Express</example>
+    <param pos="0" name="service.vendor" value="mongo-express Project"/>
+    <param pos="0" name="service.product" value="mongo-express"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:mongo-express_project:mongo-express:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Solr Admin$">
+    <description>Apache Solr</description>
+    <example>Solr Admin</example>
+    <param pos="0" name="service.vendor" value="Apache"/>
+    <param pos="0" name="service.product" value="Solr"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:apache:solr:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Spark (?:Master|Worker) at (?:spark:\/\/)?(\S{1,512}):\d{1,5}$">
+    <description>Apache Spark</description>
+    <example host.name="spark-master-0.foo.bar">Spark Master at spark://spark-master-0.foo.bar:7077</example>
+    <example host.name="10.10.10.10">Spark Master at spark://10.10.10.10:7077</example>
+    <example host.name="10.10.10.10">Spark Worker at 10.10.10.10:45339</example>
+    <param pos="0" name="service.vendor" value="Apache"/>
+    <param pos="0" name="service.product" value="Spark"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:apache:spark:-"/>
+    <param pos="1" name="host.name"/>
+  </fingerprint>
+
+  <fingerprint pattern="^pfSense - Login$">
+    <description>pfSense Firewall</description>
+    <example>pfSense - Login</example>
+    <param pos="0" name="service.vendor" value="pfSense"/>
+    <param pos="0" name="service.product" value="pfSense"/>
+    <param pos="0" name="service.device" value="Firewall"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:pfsense:pfsense:-"/>
+    <param pos="0" name="service.component.vendor" value="nginx"/>
+    <param pos="0" name="service.component.product" value="nginx"/>
+    <param pos="0" name="service.component.cpe23" value="cpe:/a:f5:nginx:-"/>
+    <param pos="0" name="os.vendor" value="pfSense"/>
+    <param pos="0" name="os.product" value="FreeBSD"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Netgate pfSense Plus - Login$">
+    <description>pfSense Plus Firewall</description>
+    <example>Netgate pfSense Plus - Login</example>
+    <param pos="0" name="service.vendor" value="Netgate"/>
+    <param pos="0" name="service.product" value="pfSense"/>
+    <param pos="0" name="service.device" value="Firewall"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:netgate:pfsense:-"/>
+    <param pos="0" name="service.component.vendor" value="nginx"/>
+    <param pos="0" name="service.component.product" value="nginx"/>
+    <param pos="0" name="service.component.cpe23" value="cpe:/a:f5:nginx:-"/>
+    <param pos="0" name="os.vendor" value="pfSense"/>
+    <param pos="0" name="os.product" value="FreeBSD"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Vigor Login Page$">
+    <description>DrayTek Vigor network equipment - without model or version</description>
+    <example>Vigor Login Page</example>
+    <param pos="0" name="os.vendor" value="DrayTek"/>
+    <param pos="0" name="os.family" value="Vigor"/>
+    <param pos="0" name="hw.vendor" value="DrayTek"/>
+    <param pos="0" name="hw.family" value="Vigor"/>
+  </fingerprint>
+
+  <fingerprint pattern="^(?:WSO2 API Manager|\[Publisher Portal\]WSO2 APIM)$">
+    <description>WSO2 API Manager</description>
+    <example>WSO2 API Manager</example>
+    <example>[Publisher Portal]WSO2 APIM</example>
+    <param pos="0" name="service.vendor" value="WSO2"/>
+    <param pos="0" name="service.product" value="API Manager"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:wso2:api_manager:-"/>
+    <param pos="0" name="service.component.vendor" value="WSO2"/>
+    <param pos="0" name="service.component.product" value="Carbon"/>
+    <param pos="0" name="service.component.cpe23" value="cpe:/a:wso2:carbon:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^WSO2 Management Console$">
+    <description>WSO2 Identity Server</description>
+    <example>WSO2 Management Console</example>
+    <param pos="0" name="service.vendor" value="WSO2"/>
+    <param pos="0" name="service.product" value="Identity Server"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:wso2:identity_server:-"/>
+    <param pos="0" name="service.component.vendor" value="WSO2"/>
+    <param pos="0" name="service.component.product" value="Carbon"/>
+    <param pos="0" name="service.component.cpe23" value="cpe:/a:wso2:carbon:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^WSO2 Enterprise Integrator \(WSO2 EI\)$">
+    <description>WSO2 Enterprise Integrator</description>
+    <example>WSO2 Enterprise Integrator (WSO2 EI)</example>
+    <param pos="0" name="service.vendor" value="WSO2"/>
+    <param pos="0" name="service.product" value="Enterprise Integrator"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:wso2:enterprise_integrator:-"/>
+    <param pos="0" name="service.component.vendor" value="WSO2"/>
+    <param pos="0" name="service.component.product" value="Carbon"/>
+    <param pos="0" name="service.component.cpe23" value="cpe:/a:wso2:carbon:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^dotCMS Content Management Platform$">
+    <description>dotCMS Content Management Platform</description>
+    <example>dotCMS Content Management Platform</example>
+    <param pos="0" name="service.vendor" value="dotCMS"/>
+    <param pos="0" name="service.product" value="dotCMS"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:dotcms:dotcms:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Zimbra (?:Web Client Sign In|Administration)$">
+    <description>Zimbra Collaboration</description>
+    <example>Zimbra Web Client Sign In</example>
+    <example>Zimbra Administration</example>
+    <param pos="0" name="service.vendor" value="Zimbra"/>
+    <param pos="0" name="service.product" value="Collaboration"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:zimbra:collaboration:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^OpenKM$">
+    <description>OpenKM - Open Source Document Management System</description>
+    <example>OpenKM</example>
+    <param pos="0" name="service.vendor" value="OpenKM"/>
+    <param pos="0" name="service.product" value="OpenKM"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:openkm:openkm:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^\s*(?:\S)*\s*::\s*Mayan EDMS\s*$">
+    <description>Mayan EDMS - open-source document management system</description>
+    <example>:: Mayan EDMS</example>
+    <example>Home :: Mayan EDMS</example>
+    <param pos="0" name="service.vendor" value="Mayan-EDMS"/>
+    <param pos="0" name="service.product" value="Mayan EDMS"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:mayan-edms:mayan_edms:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Papermerge \| Log in$">
+    <description>Papermerge - open-source document management system</description>
+    <example>Papermerge | Log in</example>
+    <param pos="0" name="service.vendor" value="Papermerge"/>
+    <param pos="0" name="service.product" value="Papermerge"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:papermerge:papermerge:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^(?:FileRun :: (?:Login|Installation))|(?:(?:\S)* :: Login \(powered by FileRun\))$">
+    <description>FileRun - self-hosted Google Drive alternative</description>
+    <example>FileRun :: Login</example>
+    <example>FileRun :: Installation</example>
+    <example>FileRun :: Login (powered by FileRun)</example>
+    <example>App Title :: Login (powered by FileRun)</example>
+    <param pos="0" name="service.vendor" value="FileRun"/>
+    <param pos="0" name="service.product" value="FileRun"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:filerun:filerun:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^SuiteCRM$">
+    <description>SuiteCRM</description>
+    <example>SuiteCRM</example>
+    <param pos="0" name="service.vendor" value="SalesAgility"/>
+    <param pos="0" name="service.product" value="SuiteCRM"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:salesagility:suitecrm:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^OpenSearch Dashboards$">
+    <description>OpenSearch Dashboards</description>
+    <example>OpenSearch Dashboards</example>
+    <param pos="0" name="service.vendor" value="Amazon"/>
+    <param pos="0" name="service.product" value="OpenSearch"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:amazon:opensearch:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Supervisor Status$">
+    <description>Supervisor - web interface</description>
+    <example>Supervisor Status</example>
+    <param pos="0" name="service.vendor" value="Supervisord"/>
+    <param pos="0" name="service.product" value="Supervisor"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:supervisord:supervisor:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^qdPM (?:\| Login|(\d+(?:\.\d+)*)(?: BETA)? Installation)$">
+    <description>qdPM - project management tool</description>
+    <example>qdPM | Login</example>
+    <example service.version="9.1">qdPM 9.1 Installation</example>
+    <example service.version="9.0">qdPM 9.0 BETA Installation</example>
+    <param pos="0" name="service.vendor" value="qdPM"/>
+    <param pos="0" name="service.product" value="qdPM"/>
+    <param pos="1" name="service.version"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:qdpm:qdpm:{service.version}"/>
+  </fingerprint>
+
+  <fingerprint pattern="^ZAP API UI$">
+    <description>OWASP Zed Attack Proxy (ZAP) - API Web UI</description>
+    <example>ZAP API UI</example>
+    <param pos="0" name="service.vendor" value="OWASP"/>
+    <param pos="0" name="service.product" value="Zed Attack Proxy"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:owasp:zed_attack_proxy:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^CloudPanel \| Log In$">
+    <description>CloudPanel - server control panel</description>
+    <example>CloudPanel | Log In</example>
+    <param pos="0" name="service.vendor" value="MGT-COMMERCE GmbH"/>
+    <param pos="0" name="service.product" value="CloudPanel"/>
+  </fingerprint>
+
+  <fingerprint pattern="^(?:Login \| Control WebPanel|CWP \| User)$">
+    <description>Control Web Panel (CWP) (formerly CentOS Web Panel) - web hosting control panel</description>
+    <example>Login | Control WebPanel</example>
+    <example>CWP | User</example>
+    <param pos="0" name="service.vendor" value="Control Web Panel"/>
+    <param pos="0" name="service.product" value="Control Web Panel"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:control-webpanel:webpanel:-"/>
+    <param pos="0" name="os.family" value="Linux"/>
+    <param pos="0" name="os.product" value="Linux"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Graphs \(darkstat [^)]+\)$">
+    <description>darkstat - network statistics gatherer</description>
+    <example>Graphs (darkstat eth0)</example>
+    <example>Graphs (darkstat lagg0.4091, lagg0.21, lagg0.101, lagg0.102, lagg0.4001, lagg0.4081)</example>
+    <param pos="0" name="service.vendor" value="darkstat Project"/>
+    <param pos="0" name="service.product" value="darkstat"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Login to Cacti$">
+    <description>Cacti - network graphing solution</description>
+    <example>Login to Cacti</example>
+    <param pos="0" name="service.vendor" value="Cacti"/>
+    <param pos="0" name="service.product" value="Cacti"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:cacti:cacti:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Bitwarden Web Vault$">
+    <description>Bitwarden Server</description>
+    <example>Bitwarden Web Vault</example>
+    <param pos="0" name="service.vendor" value="Bitwarden"/>
+    <param pos="0" name="service.product" value="Server"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:bitwarden:server:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Vaultwarden Web Vault$">
+    <description>Vaultwarden - unofficial Bitwarden compatible server</description>
+    <example>Vaultwarden Web Vault</example>
+    <param pos="0" name="service.vendor" value="Vaultwarden"/>
+    <param pos="0" name="service.product" value="Vaultwarden"/>
+  </fingerprint>
+
+  <fingerprint pattern="^(?:GoAnywhere (\d+(?:\.\d+)*)(?: - \S{1,512})?|GoAnywhere Web Client - Login)$">
+    <description>Fortra GoAnywhere MFT - managed file transfer</description>
+    <example service.version="7.0.3">GoAnywhere 7.0.3</example>
+    <example service.version="6.8.6">GoAnywhere 6.8.6 - Production</example>
+    <example>GoAnywhere Web Client - Login</example>
+    <param pos="0" name="service.vendor" value="Fortra"/>
+    <param pos="0" name="service.product" value="GoAnywhere MFT"/>
+    <param pos="1" name="service.version"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:helpsystems:goanywhere_managed_file_transfer:{service.version}"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Server Backup Manager SE\s*(?:- .{1,512})?$">
+    <description>ConnectWise R1Soft Server Backup Manager (SBM)</description>
+    <example>Server Backup Manager SE</example>
+    <example>Server Backup Manager SE </example>
+    <example>Server Backup Manager SE - foo.bar</example>
+    <example>Server Backup Manager SE - [1234] FooBar</example>
+    <param pos="0" name="service.vendor" value="ConnectWise"/>
+    <param pos="0" name="service.product" value="R1Soft Server Backup Manager"/>
+  </fingerprint>
+
+  <!-- Specific Eltex fingerprints to enable CPE generation -->
+
+  <fingerprint pattern="^Eltex - NTP-RG-1402G$">
+    <description>Eltex - NTP-RG-1402G broadband router</description>
+    <example>Eltex - NTP-RG-1402G</example>
+    <param pos="0" name="os.vendor" value="Eltex"/>
+    <param pos="0" name="os.product" value="NTP-RG-1402G Firmware"/>
+    <param pos="0" name="os.device" value="Broadband Router"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:eltex-co:ntp-rg-1402g_firmware:-"/>
+    <param pos="0" name="hw.vendor" value="Eltex"/>
+    <param pos="0" name="hw.product" value="NTP-RG-1402G"/>
+    <param pos="0" name="hw.device" value="Broadband Router"/>
+    <param pos="0" name="hw.cpe23" value="cpe:/h:eltex-co:ntp-rg-1402g:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Eltex - NTP-2$">
+    <description>Eltex - NTP-2 broadband router</description>
+    <example>Eltex - NTP-2</example>
+    <param pos="0" name="os.vendor" value="Eltex"/>
+    <param pos="0" name="os.product" value="NTP-2 Firmware"/>
+    <param pos="0" name="os.device" value="Broadband Router"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:eltex-co:ntp-2_firmware:-"/>
+    <param pos="0" name="hw.vendor" value="Eltex"/>
+    <param pos="0" name="hw.product" value="NTP-2"/>
+    <param pos="0" name="hw.device" value="Broadband Router"/>
+    <param pos="0" name="hw.cpe23" value="cpe:/h:eltex-co:ntp-2:-"/>
+  </fingerprint>
+
+  <!-- General Eltex fingerprints -->
+
+  <fingerprint pattern="^Eltex - (NT[PU]-RG-\d[\w-]+):?(:?rev\.\w\w?)?$">
+    <description>Eltex RG model ONT class broadband router</description>
+    <example hw.product="NTU-RG-1402G-W">Eltex - NTU-RG-1402G-W</example>
+    <example hw.product="NTU-RG-1421G-Wac" hw.version="rev.A1">Eltex - NTU-RG-1421G-Wac:rev.A1</example>
+    <example hw.product="NTP-RG-1402G-W" hw.version="rev.C">Eltex - NTP-RG-1402G-W:rev.C</example>
+    <param pos="0" name="os.vendor" value="Eltex"/>
+    <param pos="0" name="os.device" value="Broadband Router"/>
+    <param pos="0" name="hw.vendor" value="Eltex"/>
+    <param pos="1" name="hw.product"/>
+    <param pos="2" name="hw.version"/>
+    <param pos="0" name="hw.device" value="Broadband Router"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Eltex - (NT[PU]-2\w\w?)$">
+    <description>Eltex - NTP / NTU model broadband router</description>
+    <example hw.product="NTU-2V">Eltex - NTU-2V</example>
+    <example hw.product="NTU-2VC">Eltex - NTU-2VC</example>
+    <example hw.product="NTP-2C">Eltex - NTP-2C</example>
+    <param pos="0" name="os.vendor" value="Eltex"/>
+    <param pos="0" name="os.device" value="Broadband Router"/>
+    <param pos="0" name="hw.vendor" value="Eltex"/>
+    <param pos="1" name="hw.product"/>
+    <param pos="0" name="hw.device" value="Broadband Router"/>
   </fingerprint>
 
 </fingerprints>

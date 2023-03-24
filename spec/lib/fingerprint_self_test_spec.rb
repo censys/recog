@@ -3,8 +3,8 @@ require 'regexp_parser'
 require 'nokogiri'
 
 describe Recog::DB do
-  let(:schema) { Nokogiri::XML::Schema(open(File.expand_path(File.join(%w(xml fingerprints.xsd))))) }
-  Dir[File.expand_path File.join('xml', '*.xml')].each do |xml_file_name|
+  let(:schema) { Nokogiri::XML::Schema(open(File.join(FINGERPRINT_DIR, 'fingerprints.xsd'))) }
+  Dir[File.join(FINGERPRINT_DIR, '*.xml')].each do |xml_file_name|
 
     describe "##{File.basename(xml_file_name)}" do
 
@@ -61,9 +61,9 @@ describe Recog::DB do
               end
             end
 
-            it "has parameter values other than General, Server or Unknown, which are not helpful" do
-              if pos == 0 && value =~ /^(?i:general|server|unknown)$/
-                fail "'#{param_name}' has general/server/unknown value '#{value}'"
+            it "has *.device parameter values other than General, Server or Unknown, which are not helpful" do
+              if pos == 0 && param_name =~ /^(?:[^\.]+\.device*)$/ && value =~ /^(?i:general|server|unknown)$/
+                fail "'#{param_name}' has unhelpful value '#{value}'"
               end
             end
 
@@ -151,6 +151,7 @@ describe Recog::DB do
               # test any extractions specified in the example
               example.attributes.each_pair do |k,v|
                 next if k == '_encoding'
+                next if k == '_filename'
                 expect(match[k]).to eq(v), "Regex didn't extract expected value for fingerprint attribute #{k} -- got #{match[k]} instead of #{v}"
               end
             end
