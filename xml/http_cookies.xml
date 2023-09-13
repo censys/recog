@@ -205,7 +205,6 @@
     <param pos="0" name="os.vendor" value="Cisco"/>
     <param pos="0" name="os.family" value="Adaptive Security Appliance"/>
     <param pos="0" name="os.product" value="Adaptive Security Appliance"/>
-    <param pos="0" name="os.cpe23" value="cpe:/o:cisco:adaptive_security_appliance_software:-"/>
     <param pos="0" name="hw.vendor" value="Cisco"/>
     <param pos="0" name="hw.family" value="Adaptive Security Appliance"/>
     <param pos="0" name="hw.product" value="Adaptive Security Appliance"/>
@@ -803,6 +802,25 @@
     <param pos="0" name="service.vendor" value="FileRun"/>
     <param pos="0" name="service.product" value="FileRun"/>
     <param pos="0" name="service.cpe23" value="cpe:/a:filerun:filerun:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^(DMZCookieTest|MIDMZLang|siLockLongTermInstID)=">
+    <description>Progress MOVEit Transfer (formerly MOVEit DMZ, MOVEit File Transfer)</description>
+    <example cookie="DMZCookieTest">DMZCookieTest=ifyoucanreadthisyourbrowsersupportscookies; path=/</example>
+    <example cookie="MIDMZLang">MIDMZLang=en; expires=Fri, 30-May-2025 05:08:54 GMT; path=/</example>
+    <example cookie="siLockLongTermInstID">siLockLongTermInstID=1337; expires=Fri, 30-May-2025 05:08:54 GMT; path=/</example>
+    <param pos="1" name="cookie"/>
+    <param pos="0" name="service.vendor" value="Progress"/>
+    <param pos="0" name="service.product" value="MOVEit Transfer"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:progress:moveit_transfer:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^roundcube_sessid=">
+    <description>Roundcube Webmail</description>
+    <example>roundcube_sessid=bdd66fb23fa3ce907a1e792475273145; path=/; HttpOnly</example>
+    <param pos="0" name="service.vendor" value="Roundcube"/>
+    <param pos="0" name="service.product" value="Webmail"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:roundcube:webmail:-"/>
   </fingerprint>
 
   <!--

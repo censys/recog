@@ -1112,6 +1112,7 @@
     <param pos="0" name="hw.device" value="Lights Out Management"/>
     <param pos="0" name="hw.vendor" value="HP"/>
     <param pos="0" name="hw.product" value="iLO 3"/>
+    <param pos="0" name="hw.cpe23" value="cpe:/h:hp:integrated_lights-out_3:-"/>
     <param pos="0" name="os.vendor" value="HP"/>
     <param pos="0" name="os.device" value="Lights Out Management"/>
     <param pos="0" name="os.family" value="iLO"/>
@@ -1125,6 +1126,7 @@
     <param pos="0" name="hw.device" value="Lights Out Management"/>
     <param pos="0" name="hw.vendor" value="HP"/>
     <param pos="0" name="hw.product" value="iLO 4"/>
+    <param pos="0" name="hw.cpe23" value="cpe:/h:hp:integrated_lights-out_4:-"/>
     <param pos="0" name="os.vendor" value="HP"/>
     <param pos="0" name="os.device" value="Lights Out Management"/>
     <param pos="0" name="os.family" value="iLO"/>
@@ -3255,6 +3257,14 @@
     <param pos="0" name="service.product" value="Security Scanner"/>
   </fingerprint>
 
+  <fingerprint pattern="^(?:Sign In - )?Jellyseerr$">
+    <description>Jellyseerr</description>
+    <example>Jellyseerr</example>
+    <example>Sign In - Jellyseerr</example>
+    <param pos="0" name="service.vendor" value="Jellyseerr"/>
+    <param pos="0" name="service.product" value="Jellyseerr"/>
+  </fingerprint>
+
   <fingerprint pattern="^(?:Chorus 2 - )?Kodi(?: web interface)?$">
     <description>Kodi Media Server</description>
     <example>Kodi</example>
@@ -3565,11 +3575,13 @@
     <param pos="0" name="service.device" value="Device"/>
   </fingerprint>
 
-  <fingerprint pattern="^Freebox OS (?:.*)$">
+  <fingerprint pattern="^Freebox OS">
     <description>Freebox OS on Freebox Set-top Box Devices</description>
     <example>Freebox OS :: Identification</example>
+    <example>Freebox OS</example>
     <param pos="0" name="os.vendor" value="Freebox"/>
     <param pos="0" name="os.product" value="Freebox OS"/>
+    <param pos="0" name="os.family" value="Linux"/>
     <param pos="0" name="hw.vendor" value="Freebox"/>
     <param pos="0" name="hw.device" value="Device"/>
   </fingerprint>
@@ -3904,6 +3916,14 @@
     <param pos="1" name="host.name"/>
   </fingerprint>
 
+  <fingerprint pattern="^Superset$">
+    <description>Apache Superset</description>
+    <example>Superset</example>
+    <param pos="0" name="service.vendor" value="Apache"/>
+    <param pos="0" name="service.product" value="Superset"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:apache:superset:-"/>
+  </fingerprint>
+
   <fingerprint pattern="^pfSense - Login$">
     <description>pfSense Firewall</description>
     <example>pfSense - Login</example>
@@ -4017,6 +4037,20 @@
     <param pos="0" name="service.cpe23" value="cpe:/a:papermerge:papermerge:-"/>
   </fingerprint>
 
+  <fingerprint pattern="^Paperless-ng sign in$">
+    <description>Paperless-ng - document management system</description>
+    <example>Paperless-ng sign in</example>
+    <param pos="0" name="service.vendor" value="Paperless-ng"/>
+    <param pos="0" name="service.product" value="Paperless-ng"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Paperless-ngx sign in$">
+    <description>Paperless-ngx - document management system</description>
+    <example>Paperless-ngx sign in</example>
+    <param pos="0" name="service.vendor" value="Paperless-ngx"/>
+    <param pos="0" name="service.product" value="Paperless-ngx"/>
+  </fingerprint>
+
   <fingerprint pattern="^(?:FileRun :: (?:Login|Installation))|(?:(?:\S)* :: Login \(powered by FileRun\))$">
     <description>FileRun - self-hosted Google Drive alternative</description>
     <example>FileRun :: Login</example>
@@ -4097,6 +4131,20 @@
     <param pos="0" name="service.product" value="darkstat"/>
   </fingerprint>
 
+  <fingerprint pattern="^Login - Radarr$">
+    <description>Radarr</description>
+    <example>Login - Radarr</example>
+    <param pos="0" name="service.vendor" value="Radarr"/>
+    <param pos="0" name="service.product" value="Radarr"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Login - Sonarr$">
+    <description>Sonarr</description>
+    <example>Login - Sonarr</example>
+    <param pos="0" name="service.vendor" value="Sonarr"/>
+    <param pos="0" name="service.product" value="Sonarr"/>
+  </fingerprint>
+
   <fingerprint pattern="^Login to Cacti$">
     <description>Cacti - network graphing solution</description>
     <example>Login to Cacti</example>
@@ -4139,6 +4187,44 @@
     <example>Server Backup Manager SE - [1234] FooBar</example>
     <param pos="0" name="service.vendor" value="ConnectWise"/>
     <param pos="0" name="service.product" value="R1Soft Server Backup Manager"/>
+  </fingerprint>
+
+  <fingerprint pattern="^PaperCut Login for (?:.{1,512})$">
+    <description>PaperCut MF and PaperCut NG - print management system</description>
+    <example>PaperCut Login for Foo Bar</example>
+    <param pos="0" name="service.vendor" value="PaperCut"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Transmission Web Interface$">
+    <description>Transmission</description>
+    <example>Transmission Web Interface</example>
+    <param pos="0" name="service.vendor" value="TransmissionBT"/>
+    <param pos="0" name="service.product" value="Transmission"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:transmissionbt:transmission:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^MeterSphere$">
+    <description>MeterSphere - Open-source Continuous Testing Platform</description>
+    <example>MeterSphere</example>
+    <param pos="0" name="service.vendor" value="MeterSphere"/>
+    <param pos="0" name="service.product" value="MeterSphere"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:metersphere:metersphere:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^(?:frps dashboard|frp client admin UI)$">
+    <description>frp - fast reverse proxy</description>
+    <example>frps dashboard</example>
+    <example>frp client admin UI</example>
+    <param pos="0" name="service.vendor" value="frp"/>
+    <param pos="0" name="service.product" value="frp"/>
+  </fingerprint>
+
+  <fingerprint pattern="^Roundcube Webmail :: Welcome to Roundcube Webmail$">
+    <description>Roundcube Webmail</description>
+    <example>Roundcube Webmail :: Welcome to Roundcube Webmail</example>
+    <param pos="0" name="service.vendor" value="Roundcube"/>
+    <param pos="0" name="service.product" value="Webmail"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:roundcube:webmail:-"/>
   </fingerprint>
 
   <!-- Specific Eltex fingerprints to enable CPE generation -->
@@ -4194,6 +4280,61 @@
     <param pos="0" name="hw.vendor" value="Eltex"/>
     <param pos="1" name="hw.product"/>
     <param pos="0" name="hw.device" value="Broadband Router"/>
+  </fingerprint>
+
+  <!-- FatPipe Networks fingerprints -->
+
+  <fingerprint pattern="^FatPipe MPVPN(?:.nbsp;\| Log in| Remote Configuration)$">
+    <description>FatPipe Networks MPVPN</description>
+    <example>FatPipe MPVPN&amp;nbsp;| Log in</example>
+    <example>FatPipe MPVPN Remote Configuration</example>
+    <param pos="0" name="os.vendor" value="FatPipe Networks"/>
+    <param pos="0" name="os.product" value="MPVPN Firmware"/>
+    <param pos="0" name="os.device" value="Multiplexer"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:fatpipeinc:mpvpn_firmware:-"/>
+    <param pos="0" name="hw.vendor" value="FatPipe Networks"/>
+    <param pos="0" name="hw.product" value="MPVPN"/>
+    <param pos="0" name="hw.device" value="Multiplexer"/>
+    <param pos="0" name="hw.cpe23" value="cpe:/h:fatpipeinc:mpvpn:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^FatPipe IPVPN(?:.nbsp;\| Log in| Remote Configuration)$">
+    <description>FatPipe Networks IPVPN</description>
+    <example>FatPipe IPVPN&amp;nbsp;| Log in</example>
+    <example>FatPipe IPVPN Remote Configuration</example>
+    <param pos="0" name="os.vendor" value="FatPipe Networks"/>
+    <param pos="0" name="os.product" value="IPVPN Firmware"/>
+    <param pos="0" name="os.device" value="Multiplexer"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:fatpipeinc:ipvpn_firmware:-"/>
+    <param pos="0" name="hw.vendor" value="FatPipe Networks"/>
+    <param pos="0" name="hw.product" value="IPVPN"/>
+    <param pos="0" name="hw.device" value="Multiplexer"/>
+    <param pos="0" name="hw.cpe23" value="cpe:/h:fatpipeinc:ipvpn:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^FatPipe WARP(?:.nbsp;\| Log in| Remote Configuration)$">
+    <description>FatPipe Networks WARP</description>
+    <example>FatPipe WARP&amp;nbsp;| Log in</example>
+    <example>FatPipe WARP Remote Configuration</example>
+    <param pos="0" name="os.vendor" value="FatPipe Networks"/>
+    <param pos="0" name="os.product" value="WARP Firmware"/>
+    <param pos="0" name="os.device" value="Multiplexer"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:fatpipeinc:warp_firmware:-"/>
+    <param pos="0" name="hw.vendor" value="FatPipe Networks"/>
+    <param pos="0" name="hw.product" value="WARP"/>
+    <param pos="0" name="hw.device" value="Multiplexer"/>
+    <param pos="0" name="hw.cpe23" value="cpe:/h:fatpipeinc:warp:-"/>
+  </fingerprint>
+
+  <fingerprint pattern="^FatPipe SDWAN.nbsp;\| Log in$">
+    <description>FatPipe Networks SDWAN</description>
+    <example>FatPipe SDWAN&amp;nbsp;| Log in</example>
+    <param pos="0" name="os.vendor" value="FatPipe Networks"/>
+    <param pos="0" name="os.product" value="SDWAN Firmware"/>
+    <param pos="0" name="os.device" value="SD-WAN Appliance"/>
+    <param pos="0" name="hw.vendor" value="FatPipe Networks"/>
+    <param pos="0" name="hw.product" value="SDWAN"/>
+    <param pos="0" name="hw.device" value="SD-WAN Appliance"/>
   </fingerprint>
 
 </fingerprints>

@@ -262,6 +262,7 @@ FUJI XEROX
 Facebook
 FarSite Communications
 FastHTTP Project
+FatPipe Networks
 FatWire
 Fedora Project
 Ferner
@@ -375,6 +376,7 @@ Istio
 JFrog
 Jamf
 Jellyfin
+Jellyseerr
 Jenkins
 JetBrains
 Juniper
@@ -457,6 +459,7 @@ Merit LILIN
 Mersive
 MetaInfo
 Metabase
+MeterSphere
 MiBridge Inc.
 Michael Tokarev
 MicroStrategy
@@ -558,6 +561,9 @@ Palm
 Palo Alto Networks
 Panasonic
 Panduit
+PaperCut
+Paperless-ng
+Paperless-ngx
 Papermerge
 Paradyne
 Parallels
@@ -592,6 +598,7 @@ Process Software
 Progress
 Prometheus
 Pronet
+Prowlarr
 Proxmox
 Psion Teklogix
 Pulse Secure
@@ -609,6 +616,7 @@ RIPE
 RSI
 RStudio
 RabbitMQ
+Radarr
 Rapid7
 Raritan
 Raspbian
@@ -630,6 +638,7 @@ Rockliffe
 Rockwell Automation
 Rohde & Schwarz
 Roku
+Roundcube
 Roxen
 Ruby-Lang
 Ruckus
@@ -695,6 +704,7 @@ Softing
 Software House
 SolarWinds
 SonarQube
+Sonarr
 SonicWall
 Sonos
 Sony
@@ -769,6 +779,7 @@ Tor Project
 TornadoWeb
 Toshiba
 Traefik Labs
+TransmissionBT
 Treck
 Tridium
 Troy
@@ -793,7 +804,7 @@ Vaddio
 Valcom
 VanDyke Software
 Vanguard Managed Solutions
-Varnish-cache
+Varnish Cache Project
 Vaultwarden
 VcXsrv
 Vegastream
@@ -863,6 +874,7 @@ enGenius
 estos
 etherpad
 exim
+frp
 gdnsd
 home.pl
 i.LON
