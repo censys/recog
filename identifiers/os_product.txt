@@ -68,7 +68,7 @@ Discover
 Document Centre
 Dynix
 EDR G902 Firmware
-EDR G903 Firmware
+EDR-G903 Firmware
 EdgeBlaster
 EdgeOS
 Email Appliance
@@ -119,9 +119,11 @@ IMC
 IOS
 IPReach
 IPSO
+IPVPN Firmware
 IRIX
 IVE OS
 Integrated Lights Out Manager
+Intel(R) Active Management Technology Firmware
 Irix
 Isilon OneFS OS
 JetDirect
@@ -136,6 +138,7 @@ Linux Enterprise Desktop
 Linux Enterprise Server
 MDS 9000
 MPE XL
+MPVPN Firmware
 MPX100 iSCSI Bridge
 MSL Tape Library
 Mac OS
@@ -224,6 +227,7 @@ Router
 RouterOS
 SCM Manager module
 SCO UNIX
+SDWAN Firmware
 SEHI
 SIGMA Spectrum Infusion System Firmware
 SINIX
@@ -240,7 +244,7 @@ ScanFront
 ScreenOS
 Secure Linux
 SecureOS
-Serenity
+SerenityOS
 SmartEdge OS
 SmartServer
 SmoothWall
@@ -296,6 +300,7 @@ Virtual Library
 VoIP
 VxWorks
 WAP
+WARP Firmware
 WBR204G
 WaveCore
 WebCSU

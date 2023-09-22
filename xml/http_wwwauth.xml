@@ -2,8 +2,16 @@
 <fingerprints matches="http_header.wwwauth" protocol="http" database_type="service" preference="0.85">
   <!-- HTTP WWW-Authenticate headers are matched against these patterns to fingerprint HTTP servers. -->
 
+  <fingerprint pattern="^(?:Basic|Digest) realm=&quot;Transmission&quot;$">
+    <description>Transmission</description>
+    <example>Basic realm="Transmission"</example>
+    <param pos="0" name="service.vendor" value="TransmissionBT"/>
+    <param pos="0" name="service.product" value="Transmission"/>
+    <param pos="0" name="service.cpe23" value="cpe:/a:transmissionbt:transmission:-"/>
+  </fingerprint>
+
   <fingerprint pattern="^(?:Basic|Digest) realm=&quot;monit&quot;$">
-    <description>Minot</description>
+    <description>Monit</description>
     <example>Basic realm="monit"</example>
     <param pos="0" name="service.vendor" value="Tildeslash"/>
     <param pos="0" name="service.product" value="Monit"/>
@@ -17,7 +25,6 @@
     <param pos="0" name="service.product" value="IOS"/>
     <param pos="0" name="service.family" value="IOS"/>
     <param pos="0" name="service.version" value="11"/>
-    <param pos="0" name="service.cpe23" value="cpe:/a:cisco:ios:11"/>
     <param pos="0" name="os.vendor" value="Cisco"/>
     <param pos="0" name="os.device" value="Router"/>
     <param pos="0" name="os.family" value="IOS"/>
@@ -36,7 +43,6 @@
     <param pos="0" name="service.product" value="IOS"/>
     <param pos="0" name="service.family" value="IOS"/>
     <param pos="0" name="service.version" value="12"/>
-    <param pos="0" name="service.cpe23" value="cpe:/a:cisco:ios:12"/>
     <param pos="0" name="os.vendor" value="Cisco"/>
     <param pos="0" name="os.device" value="Router"/>
     <param pos="0" name="os.family" value="IOS"/>
@@ -55,7 +61,6 @@
     <param pos="0" name="service.product" value="IOS"/>
     <param pos="0" name="service.family" value="IOS"/>
     <param pos="0" name="service.version" value="12"/>
-    <param pos="0" name="service.cpe23" value="cpe:/a:cisco:ios:12"/>
     <param pos="0" name="os.vendor" value="Cisco"/>
     <param pos="0" name="os.device" value="Router"/>
     <param pos="0" name="os.family" value="IOS"/>
@@ -444,6 +449,13 @@
     <param pos="0" name="service.cpe23" value="cpe:/a:f5:big-ip_local_traffic_manager:-"/>
   </fingerprint>
 
+  <fingerprint pattern="^(?:Basic|Digest) realm=&quot;Prowlarr&quot;$">
+    <description>Prowlarr</description>
+    <example>Basic realm="Prowlarr"</example>
+    <param pos="0" name="service.vendor" value="Prowlarr"/>
+    <param pos="0" name="service.product" value="Prowlarr"/>
+  </fingerprint>
+
   <!-- HP ProCurve -->
 
   <fingerprint pattern="(?i)^(?:Basic|Digest) realm=&quot;(?:HP|ProCurve) (J[3]\d{3}A)&quot;$">
@@ -678,6 +690,7 @@
     <param pos="0" name="os.family" value="Linux"/>
     <param pos="0" name="os.product" value="FreshTomato"/>
     <param pos="0" name="os.device" value="Router"/>
+    <param pos="0" name="os.cpe23" value="cpe:/o:freshtomato:freshtomato:-"/>
   </fingerprint>
 
   <fingerprint pattern="(?i)^Basic realm=&quot;NetPing \d+/PWR-220\s*v\d+/(?:ETH|SMS|GSM(?:3G)?)&quot;">
