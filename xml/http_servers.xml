@@ -2708,7 +2708,7 @@
     <param pos="0" name="service.family" value="Web PN Server"/>
   </fingerprint>
 
-  <fingerprint pattern="^ScreenConnect/([\d.]+)-(\d+)(?: Microsoft-HTTPAPI/2.0)?$">
+  <!-- <fingerprint pattern="^ScreenConnect/([\d.]+)-(\d+)(?: Microsoft-HTTPAPI/2.0)?$">
     <description>ConnectWise Control formerly ScreenConnect</description>
     <example service.version="6.3.13446.6374" service.update="4039728469">ScreenConnect/6.3.13446.6374-4039728469 Microsoft-HTTPAPI/2.0</example>
     <example service.update="3841999031" service.version="19.3.25270.7185">ScreenConnect/19.3.25270.7185-3841999031</example>
@@ -2717,7 +2717,7 @@
     <param pos="1" name="service.version"/>
     <param pos="2" name="service.update"/>
     <param pos="0" name="service.cpe23" value="cpe:/a:connectwise:control:{service.version}:{service.update}"/>
-  </fingerprint>
+  </fingerprint> -->
 
   <fingerprint pattern="^Lotus Expeditor Web Container/((?:\d+\.)*\d+)$">
     <description>Expeditor is a framework used by IBM in many products in the Lotus brand, such as Sametime and Notes.</description>
